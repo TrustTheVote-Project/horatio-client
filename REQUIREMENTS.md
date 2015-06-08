@@ -6,3 +6,4 @@
 * ID language that must be present (disclaimers, etc.)
 * auto-create questions based on server spec?
 * determine whether there is existing FOSS software in this space
+* figure out an SBE-acceptable alternative to a signature
