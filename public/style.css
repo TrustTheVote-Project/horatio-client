@@ -8637,6 +8637,32 @@ textarea:-moz-placeholder {
   color: #a9a9a9;
 }
 
+/* line 30, ../assets/scss/style.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Helmet, Freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #f6f6f6;
+}
+
+/* line 39, ../assets/scss/style.scss */
+section#form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+  border: 1px solid #ccc;
+}
+
+/* line 47, ../assets/scss/style.scss */
+h1 {
+  font-weight: 300;
+  text-align: center;
+  margin: 1em 0;
+}
+
 /* Media queries
 -------------------------------------------------------------------------------*/
 /* Print styles

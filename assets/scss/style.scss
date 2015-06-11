@@ -27,6 +27,29 @@ input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
 
+body {
+	font-family: "Helvetica Neue", Helvetica, Helmet, Freesans, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	margin: 0 auto;
+	max-width: 800px;
+	background-color: #f6f6f6;
+}
+
+section#form {
+	max-width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 2em;
+	border: 1px solid #ccc;
+}
+
+h1 {
+	font-weight: 300;
+	text-align: center;
+	margin: 1em 0;
+}
+
 
 /* Media queries
 -------------------------------------------------------------------------------*/
