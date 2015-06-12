@@ -83,88 +83,248 @@
 	
 	</header>
 	
-	<section id="form">
+	<section id="absentee-form" class="form-horizontal">
 		<form>
 
-			<div class="form-group text">
-	            <label for="name">Name</label>
-	            <input class="form-control" type="text" name="name" required />
-	        </div>
+            <!-- Section 1: Name & SSN -->
+            <fieldset id="name_ssn">
+    			<div id="name" class="form-group">
+    	            <label for="name_first" class="control-label">First Name</label>
+    	            <input name="name_first" type="text" class="form-control" required />
 
-	        <div class="form-group text">
-	            <label for="address">Address</label>
-	            <input class="form-control" type="text" name="address" required />
-	        </div>
+                    <label for="name_last" class="control-label">Last Name</label>
+                    <input name="name_last" type="text" class="form-control" required />
+    	        </div>
 
-	        <div class="form-group text">
-	            <label>City</label>
-	            <input class="form-control" type="text" name="city" required />
-	        </div>
+                <div id="ssn" class="form-group form-inline">
+                    <label for="ssn_1" class="control-label">Social Security #</label>
+                    <input name="ssn_1" type="text" class="form-control" style="max-width: 3.25em;" minlength="3" maxlength="3" required digits />
+                    <span class="light"> - </span>
+                    <input name="ssn_2" type="text" class="form-control" style="max-width: 2.5em;" minlength="2" maxlength="2" required digits />
+                    <span class="light"> - </span>
+                    <input name="ssn_3" type="text" class="form-control" style="max-width: 4em;" minlength="4" maxlength="4" required digits />
+                </div>
+            </fieldset>
 
-	        <div class="form-group text">
-	            <label for="state">State</label>
+            
+            <!-- Section 2: Election -->
+            <fieldset id="election">
 
-	            <select name="state" class="form-control" required>
-	            <option>Choose a state...</option>
-	              <option value="Alabama">Alabama</option>
-	              <option value="Alaska">Alaska</option>
-	              <option value="Arizona">Arizona</option>
-	              <option value="Arkansas">Arkansas</option>
-	              <option value="California">California</option>
-	              <option value="Colorado">Colorado</option>
-	              <option value="Connecticut">Connecticut</option>
-	              <option value="Delaware">Delaware</option>
-	              <option value="DC">District of Colombia (DC)</option>
-	              <option value="Florida">Florida</option>
-	              <option value="Georgia">Georgia</option>
-	              <option value="Hawaii">Hawaii</option>
-	              <option value="Idaho">Idaho</option>
-	              <option value="Illinois">Illinois</option>
-	              <option value="Indiana">Indiana</option>
-	              <option value="Iowa">Iowa</option>
-	              <option value="Kansas">Kansas</option>
-	              <option value="Kentucky">Kentucky</option>
-	              <option value="Louisiana">Louisiana</option>
-	              <option value="Maine">Maine</option>
-	              <option value="Maryland">Maryland</option>
-	              <option value="Massachusetts">Massachusetts</option>
-	              <option value="Michigan">Michigan</option>
-	              <option value="Minnesota">Minnesota</option>
-	              <option value="Mississippi">Mississippi</option>
-	              <option value="Missouri">Missouri</option>
-	              <option value="Montana">Montana</option>
-	              <option value="Nebraska">Nebraska</option>
-	              <option value="Nevada">Nevada</option>
-	              <option value="New Hampshire">New Hampshire</option>
-	              <option value="New Jersey">New Jersey</option>
-	              <option value="New Mexico">New Mexico</option>
-	              <option value="New York">New York</option>
-	              <option value="North Carolina">North Carolina</option>
-	              <option value="North Dakota">North Dakota</option>
-	              <option value="Ohio">Ohio</option>
-	              <option value="Oklahoma">Oklahoma</option>
-	              <option value="Oregon">Oregon</option>
-	              <option value="Pennsylvania">Pennsylvania</option>
-	              <option value="Rhode Island">Rhode Island</option>
-	              <option value="South Carolina">South Carolina</option>
-	              <option value="South Dakota">South Dakota</option>
-	              <option value="Tennessee">Tennessee</option>
-	              <option value="Texas">Texas</option>
-	              <option value="Utah">Utah</option>
-	              <option value="Vermont">Vermont</option>
-	              <option value="Virginia">Virginia</option>
-	              <option value="Washington">Washington</option>
-	              <option value="West Virginia">West Virginia</option>
-	              <option value="Wisconsin">Wisconsin</option>
-	              <option value="Wyoming">Wyoming</option>
-	            </select>
-	        </div>
+                <div class="form-group">
+                    <div id="election_type" class="radio-group">
+                        <p>I am applying to vote in:</p>
 
-	        <div class="form-group text" id="zip">
-	            <label for="zip">Zip</label>
-	            <input class="form-control" type="text" name="zip" style="max-width: 5.5em;" required digits minlength="5" maxlength="5" />
-	        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="election_type" type="radio" value="General or Special Election" />
+                                General or Special Election
+                            </label>
+                        </div>
 
+                        <div class="radio">
+                            <label>
+                                <input name="election_type" type="radio" value="Democratic Primary" />
+                                Democratic Primary
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input name="election_type" type="radio" value="Republican Primary" />
+                                Republican Primary
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="election_date" class="form-inline">
+                        <label class="control-label">Date of Election</label>
+
+                        <select name="election_month" class="form-control">
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+
+                        <select name="election_month" class="form-control">
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+
+
+                        <select name="election_year" class="form-control">
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="registered_area" class="form-group">
+                    <p>I am registered to vote in the:</p>
+
+                    <p>
+                        <label class="radio-inline">
+                            <input name="registered_area_type" type="radio" value="County" />
+                            County
+                        </label>
+
+                        <label class="radio-inline">
+                            <input name="registered_area_type" type="radio" value="City" />
+                            City
+                        </label>
+                        <label class="radio-inline" style="padding-left: 0;">of</label>
+
+                        <input name="registered_area_name" type="text" class="form-control" />
+                    </p>
+                </div>
+            </fieldset>
+
+            
+            <!-- Section 3: Reason for Absentee Ballot -->
+            <fieldset id="reason">
+                <h3>Reason for Absentee Ballot</h3>
+
+                <div class="col">
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1A" /> Student attending college or university outside of locality of residence in Virginia
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1B" /> Spouse of student attending college or university outside locality of residence in Virginia
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1C" /> Business outside County/City of residence on election day
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1D" /> Personal business or vacation outside County/City of residence on election day
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1E" /> I am working and commuting to/from home for 11 or more hours between 6:00 AM and 7:00 PM on election day
+                        </label>
+                    </div>
+                </div>
+                
+
+                <div class="col">
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="1F" /> I am a first responder (member of law enforcement, fire fighter, emergency technician, search and rescue)
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="2A" /> My disability or illness
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="2B" /> I am primarily and personally responsible for the care of a disabled/ill family member confined at home
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="2C" /> My pregnancy
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="3A" /> Confined, awaiting trial
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="3B" /> Confined, convicted of a misdemeanor
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input name="reason" type="radio" value="4A" /> An electoral board member, registrar, officer of election, or custodian of voting equipment
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            
+            <!-- Section 4: More Info -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 5: Residence Address -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 6: Delivery of Ballot -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 7: Change of Name/Address -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 8: Assistance to Vote -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 9: Assistant's Statement -->
+            <fieldset>
+            </fieldset>
+
+            
+            <!-- Section 10: Applicat Signature -->
+            <fieldset>
+            </fieldset>
 		</form>
 	</section>
 	
