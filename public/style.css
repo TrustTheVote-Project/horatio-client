@@ -8568,37 +8568,37 @@ button.close {
   }
 }
 /* line 87, ../assets/scss/style.scss */
-#ssn .form-control, #phone input {
+#ssn .form-control, #phone input, #fax input {
   float: none;
   display: inline-block;
 }
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 /* We like off-black for text. */
-/* line 96, ../assets/scss/style.scss */
+/* line 104, ../assets/scss/style.scss */
 body, select, input, textarea {
   color: #333;
 }
 
-/* line 98, ../assets/scss/style.scss */
+/* line 106, ../assets/scss/style.scss */
 a {
   color: #03f;
 }
 
-/* line 99, ../assets/scss/style.scss */
+/* line 107, ../assets/scss/style.scss */
 a:hover {
   color: #69f;
 }
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-/* line 102, ../assets/scss/style.scss */
+/* line 110, ../assets/scss/style.scss */
 ::-moz-selection {
   background: #fcd700;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 103, ../assets/scss/style.scss */
+/* line 111, ../assets/scss/style.scss */
 ::selection {
   background: #fcd700;
   color: #fff;
@@ -8606,19 +8606,19 @@ a:hover {
 }
 
 /*  j.mp/webkit-tap-highlight-color */
-/* line 106, ../assets/scss/style.scss */
+/* line 114, ../assets/scss/style.scss */
 a:link {
   -webkit-tap-highlight-color: #fcd700;
 }
 
-/* line 108, ../assets/scss/style.scss */
+/* line 116, ../assets/scss/style.scss */
 ins {
   background-color: #fcd700;
   color: #000;
   text-decoration: none;
 }
 
-/* line 109, ../assets/scss/style.scss */
+/* line 117, ../assets/scss/style.scss */
 mark {
   background-color: #fcd700;
   color: #000;
@@ -8627,17 +8627,17 @@ mark {
 }
 
 /* Mozilla dosen't style place holders by default */
-/* line 112, ../assets/scss/style.scss */
+/* line 120, ../assets/scss/style.scss */
 input:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* line 113, ../assets/scss/style.scss */
+/* line 121, ../assets/scss/style.scss */
 textarea:-moz-placeholder {
   color: #a9a9a9;
 }
 
-/* line 116, ../assets/scss/style.scss */
+/* line 124, ../assets/scss/style.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Helmet, Freesans, sans-serif;
   margin: 0 auto;
@@ -8645,7 +8645,7 @@ body {
   background-color: #f6f6f6;
 }
 
-/* line 125, ../assets/scss/style.scss */
+/* line 133, ../assets/scss/style.scss */
 section#absentee-form {
   margin-right: auto;
   margin-left: auto;
@@ -8665,37 +8665,53 @@ section#absentee-form:after {
   clear: both;
 }
 
-/* line 132, ../assets/scss/style.scss */
+/* line 140, ../assets/scss/style.scss */
 h1 {
   font-weight: 300;
   text-align: center;
   margin: 2em 0 1em;
 }
 
-/* line 138, ../assets/scss/style.scss */
+/* line 146, ../assets/scss/style.scss */
 h3 {
   font-size: 1.33em;
   font-weight: 300;
   margin-bottom: 1em;
 }
-/* line 143, ../assets/scss/style.scss */
+@media (min-width: 480px) {
+  /* line 146, ../assets/scss/style.scss */
+  h3 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  h3:before, h3:after {
+    content: " ";
+    display: table;
+  }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  h3:after {
+    clear: both;
+  }
+}
+/* line 152, ../assets/scss/style.scss */
 h3:first-child {
   margin-top: 0;
 }
 
-/* line 148, ../assets/scss/style.scss */
+/* line 157, ../assets/scss/style.scss */
 fieldset {
   margin: 0 -15px;
   padding: 2em 3em;
   border-bottom: 1px solid #ccc;
 }
-/* line 153, ../assets/scss/style.scss */
+/* line 162, ../assets/scss/style.scss */
 fieldset:last-child {
   border: 0;
 }
 
 @media (min-width: 480px) {
-  /* line 158, ../assets/scss/style.scss */
+  /* line 167, ../assets/scss/style.scss */
   .form-group {
     margin-left: -15px;
     margin-right: -15px;
@@ -8711,7 +8727,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 480px) {
-  /* line 161, ../assets/scss/style.scss */
+  /* line 170, ../assets/scss/style.scss */
   .form-group > label {
     position: relative;
     float: left;
@@ -8722,7 +8738,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 480px) {
-  /* line 165, ../assets/scss/style.scss */
+  /* line 174, ../assets/scss/style.scss */
   .form-group > input {
     position: relative;
     float: left;
@@ -8732,22 +8748,63 @@ fieldset:last-child {
     min-height: 1px;
   }
 }
-/* line 169, ../assets/scss/style.scss */
+/* line 178, ../assets/scss/style.scss */
 .form-group span {
   color: #ccc;
 }
-/* line 173, ../assets/scss/style.scss */
+/* line 182, ../assets/scss/style.scss */
 .form-group:last-child {
   margin-bottom: 0;
 }
 
-/* line 178, ../assets/scss/style.scss */
+/* line 187, ../assets/scss/style.scss */
 .radio-group {
   margin-bottom: 15px;
 }
 
 @media (min-width: 480px) {
-  /* line 184, ../assets/scss/style.scss */
+  /* line 191, ../assets/scss/style.scss */
+  input.form-control.address {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 41.66667%;
+    min-height: 1px;
+  }
+}
+
+@media (min-width: 480px) {
+  /* line 195, ../assets/scss/style.scss */
+  label.control-label.apt {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 16.66667%;
+    min-height: 1px;
+  }
+}
+
+@media (min-width: 480px) {
+  /* line 199, ../assets/scss/style.scss */
+  input.form-control.apt {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 16.66667%;
+    min-height: 1px;
+  }
+}
+
+/* line 203, ../assets/scss/style.scss */
+input.form-control.zip {
+  max-width: 7em;
+}
+
+@media (min-width: 480px) {
+  /* line 209, ../assets/scss/style.scss */
   #name input {
     position: relative;
     float: left;
@@ -8758,7 +8815,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 768px) {
-  /* line 184, ../assets/scss/style.scss */
+  /* line 209, ../assets/scss/style.scss */
   #name input {
     position: relative;
     min-height: 1px;
@@ -8769,13 +8826,13 @@ fieldset:last-child {
   }
 }
 
-/* line 191, ../assets/scss/style.scss */
+/* line 216, ../assets/scss/style.scss */
 .form-inline label {
   display: block;
 }
 
 @media (min-width: 480px) {
-  /* line 206, ../assets/scss/style.scss */
+  /* line 231, ../assets/scss/style.scss */
   #election #election_type {
     position: relative;
     float: left;
@@ -8786,7 +8843,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 768px) {
-  /* line 206, ../assets/scss/style.scss */
+  /* line 231, ../assets/scss/style.scss */
   #election #election_type {
     position: relative;
     min-height: 1px;
@@ -8797,7 +8854,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 480px) {
-  /* line 211, ../assets/scss/style.scss */
+  /* line 236, ../assets/scss/style.scss */
   #election #election_date {
     position: relative;
     float: left;
@@ -8808,7 +8865,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 768px) {
-  /* line 211, ../assets/scss/style.scss */
+  /* line 236, ../assets/scss/style.scss */
   #election #election_date {
     position: relative;
     min-height: 1px;
@@ -8819,7 +8876,7 @@ fieldset:last-child {
   }
 }
 @media (min-width: 768px) {
-  /* line 216, ../assets/scss/style.scss */
+  /* line 240, ../assets/scss/style.scss */
   #election #election_date label {
     position: relative;
     min-height: 1px;
@@ -8829,32 +8886,34 @@ fieldset:last-child {
     width: 41.66667%;
   }
 }
-/* line 220, ../assets/scss/style.scss */
+/* line 244, ../assets/scss/style.scss */
 #election #election_date .form-control {
   width: auto;
   display: inline-block;
   margin-right: 0.5em;
 }
-@media (min-width: 480px) {
-  /* line 227, ../assets/scss/style.scss */
-  #election #registered_area {
+/* line 248, ../assets/scss/style.scss */
+#election #election_date .form-control:last-child {
+  margin-right: 0;
+}
+/* line 255, ../assets/scss/style.scss */
+#election #registered_area label {
+  width: auto;
+}
+@media (min-width: 768px) {
+  /* line 259, ../assets/scss/style.scss */
+  #election #registered_area select {
     position: relative;
-    float: left;
+    min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    width: 100%;
-    min-height: 1px;
+    float: left;
+    width: 50%;
   }
-}
-/* line 230, ../assets/scss/style.scss */
-#election #registered_area input[type="text"] {
-  display: inline-block;
-  margin: 0 15px;
-  max-width: 30em;
 }
 
 @media (min-width: 480px) {
-  /* line 240, ../assets/scss/style.scss */
+  /* line 268, ../assets/scss/style.scss */
   #reason .col {
     position: relative;
     float: left;
@@ -8864,56 +8923,63 @@ fieldset:last-child {
     min-height: 1px;
   }
 }
-/* line 244, ../assets/scss/style.scss */
+/* line 272, ../assets/scss/style.scss */
 #reason .radio {
   margin-bottom: 0.5em;
 }
 
-/* line 250, ../assets/scss/style.scss */
+/* line 278, ../assets/scss/style.scss */
 #birth_year select {
   width: auto;
 }
 
-/* line 262, ../assets/scss/style.scss */
-#email input {
-  max-width: 30em;
-}
-
-@media (min-width: 480px) {
-  /* line 268, ../assets/scss/style.scss */
-  #residence_address input[name="residence_address"] {
+@media (min-width: 768px) {
+  /* line 290, ../assets/scss/style.scss */
+  #email input {
     position: relative;
-    float: left;
+    min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    width: 41.66667%;
-    min-height: 1px;
-  }
-}
-@media (min-width: 480px) {
-  /* line 272, ../assets/scss/style.scss */
-  #residence_address label[for="residence_apt"] {
-    position: relative;
     float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 16.66667%;
-    min-height: 1px;
-  }
-}
-@media (min-width: 480px) {
-  /* line 276, ../assets/scss/style.scss */
-  #residence_address input[name="residence_apt"] {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 16.66667%;
-    min-height: 1px;
+    width: 58.33333%;
   }
 }
 
-/* line 281, ../assets/scss/style.scss */
+@media (min-width: 480px) {
+  /* line 296, ../assets/scss/style.scss */
+  #delivery_statezip input, #delivery_statezip select {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 75%;
+    min-height: 1px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 296, ../assets/scss/style.scss */
+  #delivery_statezip input, #delivery_statezip select {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 25%;
+  }
+}
+
+/* line 304, ../assets/scss/style.scss */
+#moved_date .form-control {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* line 308, ../assets/scss/style.scss */
+#moved_date .form-control:last-child {
+  margin-right: 0;
+}
+
+/* line 314, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -8922,12 +8988,12 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 292, ../assets/scss/style.scss */
+  /* line 325, ../assets/scss/style.scss */
   #name input:first-of-type {
     margin-bottom: 15px;
   }
 
-  /* line 296, ../assets/scss/style.scss */
+  /* line 329, ../assets/scss/style.scss */
   #election #registered_area input[type="text"] {
     margin: 15px 0 0;
   }
