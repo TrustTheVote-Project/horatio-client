@@ -6,3 +6,9 @@ A client for an absentee ballot request form, with [a corresponding server](http
 ## Overview
 
 This is a responsive form that collects the information required to request an absentee ballot, encodes it as JSON, and transmits it to a server.
+
+## Stack
+
+* Bower
+* Bootstrap SASS
+* Compass
