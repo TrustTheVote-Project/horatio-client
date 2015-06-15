@@ -36,8 +36,7 @@
 		    	// for testing, output the JSON at the bottom of the page
 		        $('#result').text(JSON.stringify($('form').serializeObject()));
 
-		        // use this when there's a server URL to point to
-		    	// $.post( "[server URL]", JSON.stringify($('form').serializeObject() );
+		        $.post( "http://jaquith.org/api/submit/", JSON.stringify($('form').serializeObject() );
 
 		        return false;
 		    });
