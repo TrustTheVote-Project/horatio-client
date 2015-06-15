@@ -8979,7 +8979,29 @@ input.form-control.zip {
   margin-right: 0;
 }
 
-/* line 314, ../assets/scss/style.scss */
+/* line 315, ../assets/scss/style.scss */
+#result {
+  margin-top: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 768px;
+  background: #ccc;
+  padding: 2em;
+  text-overflow: wrap;
+}
+/* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+#result:before, #result:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+#result:after {
+  clear: both;
+}
+
+/* line 324, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -8988,12 +9010,12 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 325, ../assets/scss/style.scss */
+  /* line 335, ../assets/scss/style.scss */
   #name input:first-of-type {
     margin-bottom: 15px;
   }
 
-  /* line 329, ../assets/scss/style.scss */
+  /* line 339, ../assets/scss/style.scss */
   #election #registered_area input[type="text"] {
     margin: 15px 0 0;
   }

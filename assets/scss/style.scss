@@ -311,6 +311,16 @@ input.form-control.zip {
     }
 }
 
+
+#result {
+    margin-top: 2em;
+    @include container-fixed();
+    max-width: $screen-sm;
+    background: #ccc;
+    padding: 2em;
+    text-overflow: wrap;
+}
+
 footer {
     margin: 2em 0;
     text-align: center;
