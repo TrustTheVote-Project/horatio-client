@@ -21,7 +21,10 @@
 
 	  		var a = $(this).serializeArray();
 	  		$.each(a, function() {
+
+	  			// input names follow the format "[fieldset id]_[n]"
 	  			var n = this.name.split('_')[1];
+
 		        if (f[n] !== undefined) {
 		            if (!f[n].push) {
 		                f[n] = [f[n]];
@@ -32,6 +35,7 @@
 		        }
 		    });
 
+	  		// add each fieldset object to the meta object
 		    if (o[fieldset] !== undefined) {
 	            if (!o[fieldset].push) {
 	                o[fieldset] = [o[fieldset]];
