@@ -80,24 +80,21 @@
 		<form>
 
             <!-- Section 1: Name & SSN -->
-            <fieldset id="name_ssn">
+            <fieldset id="name">
                 <div id="first_middle" class="form-group">
                     <label for="name_first" class="control-label">First Name</label>
                     <input name="name_first" type="text" class="form-control" required />
 
-                    <label for="middle_last" class="control-label">Middle Name</label>
-                    <input name="middle_last" type="text" class="form-control" required />
+                    <label for="name_middle" class="control-label">Middle Name</label>
+                    <input name="name_middle" type="text" class="form-control" />
                 </div>
 
                 <div id="last_ssn" class="form-group">
                     <label for="name_last" class="control-label">Last Name</label>
                     <input name="name_last" type="text" class="form-control" required />
 
-                    <label for="ssn" class="control-label">Social Security # (last 4)</label>
-                    <input name="ssn" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
-                </div>
-
-                <div id="ssn" class="form-group form-inline">
+                    <label for="name_ssn" class="control-label">Social Security # (last 4)</label>
+                    <input name="name_ssn" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
                 </div>
             </fieldset>
 
@@ -412,7 +409,7 @@
 
             
             <!-- Section 4: More Info -->
-            <fieldset>
+            <fieldset id="more_info">
                 <h3>More Info (Optional)</h3>
 
                 <div id="birth_year" class="form-group form-inline">
@@ -540,7 +537,7 @@
 
             
             <!-- Section 5: Residence Address -->
-            <fieldset>
+            <fieldset id="address">
                 <h3>Residence Address</h3>
 
                 <div id="residence_address" class="form-group form-inline">
@@ -564,7 +561,7 @@
 
             
             <!-- Section 6: Delivery of Ballot -->
-            <fieldset>
+            <fieldset id="delivery">
                 <h3>Delivery of Ballot</h3>
 
                 <div class="form-group">
@@ -671,7 +668,7 @@
 
             
             <!-- Section 7: Change of Name/Address -->
-            <fieldset>
+            <fieldset id="change">
                 <h3>Change of Name/Address</h3>
 
                 <div id="former_name" class="form-group">
@@ -780,7 +777,7 @@
 
             
             <!-- Section 8: Assistance to Vote -->
-            <fieldset>
+            <fieldset id="assistance">
                 <div class="form-group">
                     <div class="checkbox">
                         <label><input name="assistance" type="checkbox" value="" />
@@ -792,7 +789,7 @@
 
             
             <!-- Section 9: Assistant's Statement -->
-            <fieldset>
+            <fieldset id="assistant">
                 <h3>Assistant’s Statement/Info</h3>
 
 
@@ -893,7 +890,7 @@
 
             
             <!-- Section 10: Applicat Signature -->
-            <fieldset>
+            <fieldset id="signature">
                 <h3>Applicant Signature</h3>
 
                 <div class="form-group">

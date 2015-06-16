@@ -217,11 +217,11 @@ input.form-control.zip {
         @include make-sm-column(3);
     }
 
-    label[for="ssn"] {
+    label[for="name_ssn"] {
         @include make-sm-column(4);
     }
 
-    input[name="ssn"] {
+    input[name="name_ssn"] {
         @include make-sm-column(2);
     }
 }
@@ -229,13 +229,6 @@ input.form-control.zip {
 .form-inline {
     label {
         display: block;
-    }
-}
-
-#ssn {
-
-    .form-control {
-        @extend %form-block;
     }
 }
 

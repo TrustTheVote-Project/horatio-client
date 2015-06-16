@@ -12,18 +12,36 @@
 (function($){
 	
 	$.fn.serializeObject = function() {
+	    
 	    var o = {};
-	    var a = this.serializeArray();
-	    $.each(a, function() {
-	        if (o[this.name] !== undefined) {
-	            if (!o[this.name].push) {
-	                o[this.name] = [o[this.name]];
+
+	  	$.each(this.find("fieldset"), function() {
+	    	var f = {};
+	  		var fieldset = $(this).attr("id");
+
+	  		var a = $(this).serializeArray();
+	  		$.each(a, function() {
+	  			var n = this.name.split('_')[1];
+		        if (f[n] !== undefined) {
+		            if (!f[n].push) {
+		                f[n] = [f[n]];
+		            }
+		            f[n].push(this.value || '');
+		        } else {
+		            f[n] = this.value || '';
+		        }
+		    });
+
+		    if (o[fieldset] !== undefined) {
+	            if (!o[fieldset].push) {
+	                o[fieldset] = [o[fieldset]];
 	            }
-	            o[this.name].push(this.value || '');
+	            o[fieldset].push(f || '');
 	        } else {
-	            o[this.name] = this.value || '';
+	            o[fieldset] = f || '';
 	        }
-	    });
+	  	});
+	    
 	    return o;
 	};
 
