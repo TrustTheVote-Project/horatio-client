@@ -205,10 +205,24 @@ input.form-control.zip {
 }
 
 // section 1: name + ssn
-#name {
+#first_middle {
     input {
         @include make-xs-column(9);
         @include make-sm-column(3);
+    }
+}
+
+#last_ssn {
+    input {
+        @include make-sm-column(3);
+    }
+
+    label[for="ssn"] {
+        @include make-sm-column(4);
+    }
+
+    input[name="ssn"] {
+        @include make-sm-column(2);
     }
 }
 
@@ -332,8 +346,10 @@ footer {
 
 @media screen and (max-width: $screen-sm) {
     
-    #name input:first-of-type {
-        margin-bottom: $form-group-margin-bottom;
+    #first_middle, #last_ssn {
+        input:first-of-type {
+            margin-bottom: $form-group-margin-bottom;
+        }
     }
 
     #election #registered_area input[type="text"] {

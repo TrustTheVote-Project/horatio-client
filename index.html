@@ -81,17 +81,23 @@
 
             <!-- Section 1: Name & SSN -->
             <fieldset id="name_ssn">
-    			<div id="name" class="form-group">
-    	            <label for="name_first" class="control-label">First Name</label>
-    	            <input name="name_first" type="text" class="form-control" required />
+                <div id="first_middle" class="form-group">
+                    <label for="name_first" class="control-label">First Name</label>
+                    <input name="name_first" type="text" class="form-control" required />
 
+                    <label for="middle_last" class="control-label">Middle Name</label>
+                    <input name="middle_last" type="text" class="form-control" required />
+                </div>
+
+                <div id="last_ssn" class="form-group">
                     <label for="name_last" class="control-label">Last Name</label>
                     <input name="name_last" type="text" class="form-control" required />
-    	        </div>
+
+                    <label for="ssn" class="control-label">Social Security # (last 4)</label>
+                    <input name="ssn" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
+                </div>
 
                 <div id="ssn" class="form-group form-inline">
-                    <label for="ssn" class="control-label">Social Security # (last 4)</label>
-                    <input name="ssn" type="text" class="form-control" style="max-width: 5em;" minlength="4" maxlength="4" required digits />
                 </div>
             </fieldset>
 
