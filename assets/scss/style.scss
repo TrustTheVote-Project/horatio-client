@@ -217,11 +217,11 @@ input.form-control.zip {
         @include make-sm-column(3);
     }
 
-    label[for="name_ssn"] {
+    label[for="name__ssn"] {
         @include make-sm-column(4);
     }
 
-    input[name="name_ssn"] {
+    input[name="name__ssn"] {
         @include make-sm-column(2);
     }
 }
@@ -235,12 +235,12 @@ input.form-control.zip {
 // section 2: election
 #election {
     
-    #election_type {
+    #election__type {
         @include make-xs-column(6);
         @include make-sm-column(4);
     }
     
-    #election_date {
+    #election__date {
         @include make-xs-column(6);
         @include make-sm-column(8);
 
@@ -258,7 +258,7 @@ input.form-control.zip {
         }
     }
 
-    #registered_area {
+    #election__locality {
         label {
             width: auto;
         }
@@ -345,7 +345,7 @@ footer {
         }
     }
 
-    #election #registered_area input[type="text"] {
+    #election #election__locality input[type="text"] {
         margin: $form-group-margin-bottom 0 0;
     }
         

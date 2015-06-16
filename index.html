@@ -82,19 +82,19 @@
             <!-- Section 1: Name & SSN -->
             <fieldset id="name">
                 <div id="first_middle" class="form-group">
-                    <label for="name_first" class="control-label">First Name</label>
-                    <input name="name_first" type="text" class="form-control" required />
+                    <label for="name__first" class="control-label">First Name</label>
+                    <input name="name__first" type="text" class="form-control" required />
 
-                    <label for="name_middle" class="control-label">Middle Name</label>
-                    <input name="name_middle" type="text" class="form-control" />
+                    <label for="name__middle" class="control-label">Middle Name</label>
+                    <input name="name__middle" type="text" class="form-control" />
                 </div>
 
                 <div id="last_ssn" class="form-group">
-                    <label for="name_last" class="control-label">Last Name</label>
-                    <input name="name_last" type="text" class="form-control" required />
+                    <label for="name__last" class="control-label">Last Name</label>
+                    <input name="name__last" type="text" class="form-control" required />
 
-                    <label for="name_ssn" class="control-label">Social Security # (last 4)</label>
-                    <input name="name_ssn" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
+                    <label for="name__ssn" class="control-label">Social Security # (last 4)</label>
+                    <input name="name__ssn" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
                 </div>
             </fieldset>
 
@@ -103,35 +103,35 @@
             <fieldset id="election">
 
                 <div class="form-group">
-                    <div id="election_type" class="radio-group">
+                    <div id="election__type" class="radio-group">
                         <p>I am applying to vote in:</p>
 
                         <div class="radio">
                             <label>
-                                <input name="election_type" type="radio" value="General or Special Election" />
+                                <input name="election__type" type="radio" value="General or Special Election" />
                                 General or Special Election
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input name="election_type" type="radio" value="Democratic Primary" />
+                                <input name="election__type" type="radio" value="Democratic Primary" />
                                 Democratic Primary
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input name="election_type" type="radio" value="Republican Primary" />
+                                <input name="election__type" type="radio" value="Republican Primary" />
                                 Republican Primary
                             </label>
                         </div>
                     </div>
 
-                    <div id="election_date" class="form-inline">
+                    <div id="election__date" class="form-inline">
                         <label class="control-label">Date of Election</label>
 
-                        <select name="election_month" class="form-control">
+                        <select name="election__month" class="form-control">
                             <option value="01">January</option>
                             <option value="02">February</option>
                             <option value="03">March</option>
@@ -146,7 +146,7 @@
                             <option value="12">December</option>
                         </select>
 
-                        <select name="election_month" class="form-control">
+                        <select name="election__month" class="form-control">
                             <option value="01">1</option>
                             <option value="02">2</option>
                             <option value="03">3</option>
@@ -181,7 +181,7 @@
                         </select>
 
 
-                        <select name="election_year" class="form-control">
+                        <select name="election__year" class="form-control">
                             <option value="2015">2015</option>
                             <option value="2016">2016</option>
                             <option value="2017">2017</option>
@@ -190,10 +190,11 @@
                     </div>
                 </div>
 
-                <div id="registered_area" class="form-group form-inline">
-                    <label for="registered_area" class="control-label">I am registered to vote in</label>
+                <div id="election__locality" class="form-group form-inline">
+                    <label for="election__locality" class="control-label">I am registered to vote in</label>
 
-                    <select name="registered_area" type="text" class="form-control" />
+                    <input type="hidden" name="election__locality" />
+                    <select name="election__locality_gnis" type="text" class="form-control" />
                         <option value="">Choose your residence&hellip;</option>
                         <option value="001">Accomack County</option>
                         <option value="003">Albemarle County</option>

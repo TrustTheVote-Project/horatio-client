@@ -23,7 +23,7 @@
 	  		$.each(a, function() {
 
 	  			// input names follow the format "[fieldset id]_[n]"
-	  			var n = this.name.split('_')[1];
+	  			var n = this.name.split('__')[1];
 
 		        if (f[n] !== undefined) {
 		            if (!f[n].push) {
@@ -52,17 +52,20 @@
 	/* trigger when page is ready */
 	$(document).ready(function (){
 
-		$(function() {
-		    $('form').submit(function() {
-
-		    	// for testing, output the JSON at the bottom of the page
-		        $('#result').text(JSON.stringify($('form').serializeObject()));
-
-		        $.post( "http://jaquith.org/api/submit/", JSON.stringify($('form').serializeObject()) );
-
-		        return false;
-		    });
+		$("select[name='election__locality_gnis']").change( function() {
+			var val = $(this).find("option:selected").text();
+			$("input[name='election__locality']").val(val);
 		});
+
+	    $('form').submit(function() {
+
+	    	// for testing, output the JSON at the bottom of the page
+	        $('#result').text(JSON.stringify($('form').serializeObject()));
+
+	        $.post( "http://jaquith.org/api/submit/", JSON.stringify($('form').serializeObject()) );
+
+	        return false;
+	    });
 	
 	});
 	
