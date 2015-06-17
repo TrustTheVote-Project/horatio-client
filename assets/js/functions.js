@@ -10,7 +10,22 @@
 
 // remap jQuery to $
 (function($){
+
+	// length of an object
+	var size = function(obj) {
+	    var size = 0, key;
+	    for (key in obj) {
+	        if (obj.hasOwnProperty(key)) size++;
+	    }
+	    return size;
+	}
+
+	// return an object's first value
+	var firstValue = function(obj) {
+	    for (var key in obj) return obj[key];
+	}
 	
+
 	$.fn.serializeObject = function() {
 	    
 	    var o = {};
@@ -48,8 +63,14 @@
 	                o[fieldset] = [o[fieldset]];
 	            }
 	            o[fieldset].push(f || '');
-	        } else {
-	            o[fieldset] = f || '';
+	        }
+	        else {
+	        	// don't make a new object unless there's > 1 value
+	        	if (size(f) <= 1) {
+		  			o[fieldset] = firstValue(f) || '';
+	        	}
+		  		else
+	            	o[fieldset] = f || '';
 	        }
 	  	});
 	    
@@ -104,9 +125,10 @@
 		var todays_date = new Date();
 		$("input[name='signature__date']").val(todays_date.toISOString());
 
-	    $('form').submit(function() {
+	    $('form').submit(function(e) {
 
 	    	// for testing, output the JSON at the bottom of the page
+	    	e.preventDefault();
 	        $('#result').text(JSON.stringify($('form').serializeObject()));
 
 	        $.post( "http://jaquith.org/api/submit/", JSON.stringify($('form').serializeObject()) );
