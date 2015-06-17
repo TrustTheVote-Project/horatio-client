@@ -52,9 +52,29 @@
 	/* trigger when page is ready */
 	$(document).ready(function (){
 
+		// update locality hidden field with locality_gnis select value
 		$("select[name='election__locality_gnis']").change( function() {
 			var val = $(this).find("option:selected").text();
 			$("input[name='election__locality']").val(val);
+		});
+
+		// change state_or_country to state if a state
+		$("select[name='delivery__state']").change( function() {
+			var val = $(this).find("option:selected").val();
+			$("input[name='delivery__state_or_country']").val(val);
+		});
+
+		// change state_or_country to country if a country other than US,
+		// and remove state/zip fields
+		$("select[name='delivery__country']").change( function() {
+			var val = $(this).find("option:selected").val();
+			if (val != "United States") {
+				$("input[name='delivery__state_or_country']").val(val);
+				$("#delivery__statezip").hide();
+			}
+			else {
+				$("#delivery__statezip").show();
+			}
 		});
 
 	    $('form').submit(function() {
