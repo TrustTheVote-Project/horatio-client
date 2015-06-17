@@ -128,34 +128,34 @@
                         </div>
                     </div>
 
-                    <div id="election__date" class="form-inline">
+                    <div id="election__date" class="form-inline date">
                         <label class="control-label">Date of Election</label>
 
-                        <select name="election__month" class="form-control">
-                            <option value="January">January</option>
-                            <option value="February">February</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
+                        <select name="month" class="form-control month">
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
                         </select>
 
-                        <select name="election__month" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
+                        <select name="day" class="form-control day">
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
                             <option value="10">10</option>
                             <option value="11">11</option>
                             <option value="12">12</option>
@@ -181,12 +181,14 @@
                         </select>
 
 
-                        <select name="election__year" class="form-control">
+                        <select name="year" class="form-control year">
                             <option value="2015">2015</option>
                             <option value="2016">2016</option>
                             <option value="2017">2017</option>
                             <option value="2018">2018</option>
                         </select>
+
+                        <input type="hidden" name="election__date" value="" />
                     </div>
                 </div>
 
@@ -195,140 +197,140 @@
 
                     <input type="hidden" name="election__locality" />
                     <select name="election__locality_gnis" type="text" class="form-control" />
-                        <option value="Choose your residence&hellip;">Choose your residence&hellip;</option>
-                        <option value="Accomack County">Accomack County</option>
-                        <option value="Albemarle County">Albemarle County</option>
-                        <option value="Alexandria City">Alexandria City</option>
-                        <option value="Alleghany County">Alleghany County</option>
-                        <option value="Amelia County">Amelia County</option>
-                        <option value="Amherst County">Amherst County</option>
-                        <option value="Appomattox County">Appomattox County</option>
-                        <option value="Arlington County">Arlington County</option>
-                        <option value="Augusta County">Augusta County</option>
-                        <option value="Bath County">Bath County</option>
-                        <option value="Bedford County">Bedford County</option>
-                        <option value="Bland County">Bland County</option>
-                        <option value="Botetourt County">Botetourt County</option>
-                        <option value="Bristol City">Bristol City</option>
-                        <option value="Brunswick County">Brunswick County</option>
-                        <option value="Buchanan County">Buchanan County</option>
-                        <option value="Buckingham County">Buckingham County</option>
-                        <option value="Buena Vista City">Buena Vista City</option>
-                        <option value="Campbell County">Campbell County</option>
-                        <option value="Caroline County">Caroline County</option>
-                        <option value="Carroll County">Carroll County</option>
-                        <option value="Charles City County">Charles City County</option>
-                        <option value="Charlotte County">Charlotte County</option>
-                        <option value="Charlottesville City">Charlottesville City</option>
-                        <option value="Chesapeake City">Chesapeake City</option>
-                        <option value="Chesterfield County">Chesterfield County</option>
-                        <option value="Clarke County">Clarke County</option>
-                        <option value="Colonial Heights City">Colonial Heights City</option>
-                        <option value="Covington City">Covington City</option>
-                        <option value="Craig County">Craig County</option>
-                        <option value="Culpeper County">Culpeper County</option>
-                        <option value="Cumberland County">Cumberland County</option>
-                        <option value="Danville City">Danville City</option>
-                        <option value="Dickenson County">Dickenson County</option>
-                        <option value="Dinwiddie County">Dinwiddie County</option>
-                        <option value="Emporia City">Emporia City</option>
-                        <option value="Essex County">Essex County</option>
-                        <option value="Fairfax City">Fairfax City</option>
-                        <option value="Fairfax County">Fairfax County</option>
-                        <option value="Falls Church City">Falls Church City</option>
-                        <option value="Fauquier County">Fauquier County</option>
-                        <option value="Floyd County">Floyd County</option>
-                        <option value="Fluvanna County">Fluvanna County</option>
-                        <option value="Franklin City">Franklin City</option>
-                        <option value="Franklin County">Franklin County</option>
-                        <option value="Frederick County">Frederick County</option>
-                        <option value="Fredericksburg City">Fredericksburg City</option>
-                        <option value="Galax City">Galax City</option>
-                        <option value="Giles County">Giles County</option>
-                        <option value="Gloucester County">Gloucester County</option>
-                        <option value="Goochland County">Goochland County</option>
-                        <option value="Grayson County">Grayson County</option>
-                        <option value="Greene County">Greene County</option>
-                        <option value="Greensville County">Greensville County</option>
-                        <option value="Halifax County">Halifax County</option>
-                        <option value="Hampton City">Hampton City</option>
-                        <option value="Hanover County">Hanover County</option>
-                        <option value="Harrisonburg City">Harrisonburg City</option>
-                        <option value="Henrico County">Henrico County</option>
-                        <option value="Henry County">Henry County</option>
-                        <option value="Highland County">Highland County</option>
-                        <option value="Hopewell City">Hopewell City</option>
-                        <option value="Isle Of Wight County">Isle Of Wight County</option>
-                        <option value="James City County">James City County</option>
-                        <option value="King & Queen County">King & Queen County</option>
-                        <option value="King George County">King George County</option>
-                        <option value="King William County">King William County</option>
-                        <option value="Lancaster County">Lancaster County</option>
-                        <option value="Lee County">Lee County</option>
-                        <option value="Lexington City">Lexington City</option>
-                        <option value="Loudoun County">Loudoun County</option>
-                        <option value="Louisa County">Louisa County</option>
-                        <option value="Lunenburg County">Lunenburg County</option>
-                        <option value="Lynchburg City">Lynchburg City</option>
-                        <option value="Madison County">Madison County</option>
-                        <option value="Manassas City">Manassas City</option>
-                        <option value="Manassas Park City">Manassas Park City</option>
-                        <option value="Martinsville City">Martinsville City</option>
-                        <option value="Mathews County">Mathews County</option>
-                        <option value="Mecklenburg County">Mecklenburg County</option>
-                        <option value="Middlesex County">Middlesex County</option>
-                        <option value="Montgomery County">Montgomery County</option>
-                        <option value="Nelson County">Nelson County</option>
-                        <option value="New Kent County">New Kent County</option>
-                        <option value="Newport News City">Newport News City</option>
-                        <option value="Norfolk City">Norfolk City</option>
-                        <option value="Northampton County">Northampton County</option>
-                        <option value="Northumberland County">Northumberland County</option>
-                        <option value="Norton City">Norton City</option>
-                        <option value="Nottoway County">Nottoway County</option>
-                        <option value="Orange County">Orange County</option>
-                        <option value="Page County">Page County</option>
-                        <option value="Patrick County">Patrick County</option>
-                        <option value="Petersburg City">Petersburg City</option>
-                        <option value="Pittsylvania County">Pittsylvania County</option>
-                        <option value="Poquoson City">Poquoson City</option>
-                        <option value="Portsmouth City">Portsmouth City</option>
-                        <option value="Powhatan County">Powhatan County</option>
-                        <option value="Prince Edward County">Prince Edward County</option>
-                        <option value="Prince George County">Prince George County</option>
-                        <option value="Prince William County">Prince William County</option>
-                        <option value="Pulaski County">Pulaski County</option>
-                        <option value="Radford City">Radford City</option>
-                        <option value="Rappahannock County">Rappahannock County</option>
-                        <option value="Richmond City">Richmond City</option>
-                        <option value="Richmond County">Richmond County</option>
-                        <option value="Roanoke City">Roanoke City</option>
-                        <option value="Roanoke County">Roanoke County</option>
-                        <option value="Rockbridge County">Rockbridge County</option>
-                        <option value="Rockingham County">Rockingham County</option>
-                        <option value="Russell County">Russell County</option>
-                        <option value="Salem City">Salem City</option>
-                        <option value="Scott County">Scott County</option>
-                        <option value="Shenandoah County">Shenandoah County</option>
-                        <option value="Smyth County">Smyth County</option>
-                        <option value="Southampton County">Southampton County</option>
-                        <option value="Spotsylvania County">Spotsylvania County</option>
-                        <option value="Stafford County">Stafford County</option>
-                        <option value="Staunton City">Staunton City</option>
-                        <option value="Suffolk City">Suffolk City</option>
-                        <option value="Surry County">Surry County</option>
-                        <option value="Sussex County">Sussex County</option>
-                        <option value="Tazewell County">Tazewell County</option>
-                        <option value="Virginia Beach City">Virginia Beach City</option>
-                        <option value="Warren County">Warren County</option>
-                        <option value="Washington County">Washington County</option>
-                        <option value="Waynesboro City">Waynesboro City</option>
-                        <option value="Westmoreland County">Westmoreland County</option>
-                        <option value="Williamsburg City">Williamsburg City</option>
-                        <option value="Winchester City">Winchester City</option>
-                        <option value="Wise County">Wise County</option>
-                        <option value="Wythe County">Wythe County</option>
-                        <option value="York County">York County</option>
+                        <option value="">Choose your residence&hellip;</option>
+                        <option value="001">Accomack County</option>
+                        <option value="003">Albemarle County</option>
+                        <option value="510">Alexandria City</option>
+                        <option value="005">Alleghany County</option>
+                        <option value="007">Amelia County</option>
+                        <option value="009">Amherst County</option>
+                        <option value="011">Appomattox County</option>
+                        <option value="013">Arlington County</option>
+                        <option value="015">Augusta County</option>
+                        <option value="017">Bath County</option>
+                        <option value="019">Bedford County</option>
+                        <option value="021">Bland County</option>
+                        <option value="023">Botetourt County</option>
+                        <option value="520">Bristol City</option>
+                        <option value="025">Brunswick County</option>
+                        <option value="027">Buchanan County</option>
+                        <option value="029">Buckingham County</option>
+                        <option value="530">Buena Vista City</option>
+                        <option value="031">Campbell County</option>
+                        <option value="033">Caroline County</option>
+                        <option value="035">Carroll County</option>
+                        <option value="036">Charles City County</option>
+                        <option value="037">Charlotte County</option>
+                        <option value="540">Charlottesville City</option>
+                        <option value="550">Chesapeake City</option>
+                        <option value="041">Chesterfield County</option>
+                        <option value="053">Clarke County</option>
+                        <option value="570">Colonial Heights City</option>
+                        <option value="580">Covington City</option>
+                        <option value="045">Craig County</option>
+                        <option value="047">Culpeper County</option>
+                        <option value="049">Cumberland County</option>
+                        <option value="590">Danville City</option>
+                        <option value="051">Dickenson County</option>
+                        <option value="053">Dinwiddie County</option>
+                        <option value="595">Emporia City</option>
+                        <option value="057">Essex County</option>
+                        <option value="600">Fairfax City</option>
+                        <option value="059">Fairfax County</option>
+                        <option value="610">Falls Church City</option>
+                        <option value="061">Fauquier County</option>
+                        <option value="063">Floyd County</option>
+                        <option value="065">Fluvanna County</option>
+                        <option value="620">Franklin City</option>
+                        <option value="067">Franklin County</option>
+                        <option value="069">Frederick County</option>
+                        <option value="630">Fredericksburg City</option>
+                        <option value="640">Galax City</option>
+                        <option value="071">Giles County</option>
+                        <option value="073">Gloucester County</option>
+                        <option value="075">Goochland County</option>
+                        <option value="077">Grayson County</option>
+                        <option value="079">Greene County</option>
+                        <option value="081">Greensville County</option>
+                        <option value="083">Halifax County</option>
+                        <option value="650">Hampton City</option>
+                        <option value="085">Hanover County</option>
+                        <option value="660">Harrisonburg City</option>
+                        <option value="087">Henrico County</option>
+                        <option value="089">Henry County</option>
+                        <option value="091">Highland County</option>
+                        <option value="670">Hopewell City</option>
+                        <option value="093">Isle Of Wight County</option>
+                        <option value="095">James City County</option>
+                        <option value="097">King & Queen County</option>
+                        <option value="099">King George County</option>
+                        <option value="101">King William County</option>
+                        <option value="103">Lancaster County</option>
+                        <option value="105">Lee County</option>
+                        <option value="678">Lexington City</option>
+                        <option value="107">Loudoun County</option>
+                        <option value="109">Louisa County</option>
+                        <option value="111">Lunenburg County</option>
+                        <option value="680">Lynchburg City</option>
+                        <option value="113">Madison County</option>
+                        <option value="683">Manassas City</option>
+                        <option value="685">Manassas Park City</option>
+                        <option value="690">Martinsville City</option>
+                        <option value="115">Mathews County</option>
+                        <option value="117">Mecklenburg County</option>
+                        <option value="119">Middlesex County</option>
+                        <option value="121">Montgomery County</option>
+                        <option value="125">Nelson County</option>
+                        <option value="127">New Kent County</option>
+                        <option value="700">Newport News City</option>
+                        <option value="710">Norfolk City</option>
+                        <option value="131">Northampton County</option>
+                        <option value="133">Northumberland County</option>
+                        <option value="720">Norton City</option>
+                        <option value="135">Nottoway County</option>
+                        <option value="137">Orange County</option>
+                        <option value="139">Page County</option>
+                        <option value="141">Patrick County</option>
+                        <option value="730">Petersburg City</option>
+                        <option value="143">Pittsylvania County</option>
+                        <option value="735">Poquoson City</option>
+                        <option value="740">Portsmouth City</option>
+                        <option value="145">Powhatan County</option>
+                        <option value="147">Prince Edward County</option>
+                        <option value="149">Prince George County</option>
+                        <option value="153">Prince William County</option>
+                        <option value="155">Pulaski County</option>
+                        <option value="750">Radford City</option>
+                        <option value="157">Rappahannock County</option>
+                        <option value="760">Richmond City</option>
+                        <option value="159">Richmond County</option>
+                        <option value="770">Roanoke City</option>
+                        <option value="161">Roanoke County</option>
+                        <option value="163">Rockbridge County</option>
+                        <option value="165">Rockingham County</option>
+                        <option value="167">Russell County</option>
+                        <option value="775">Salem City</option>
+                        <option value="169">Scott County</option>
+                        <option value="171">Shenandoah County</option>
+                        <option value="173">Smyth County</option>
+                        <option value="175">Southampton County</option>
+                        <option value="177">Spotsylvania County</option>
+                        <option value="179">Stafford County</option>
+                        <option value="790">Staunton City</option>
+                        <option value="800">Suffolk City</option>
+                        <option value="181">Surry County</option>
+                        <option value="183">Sussex County</option>
+                        <option value="185">Tazewell County</option>
+                        <option value="810">Virginia Beach City</option>
+                        <option value="187">Warren County</option>
+                        <option value="191">Washington County</option>
+                        <option value="820">Waynesboro City</option>
+                        <option value="193">Westmoreland County</option>
+                        <option value="830">Williamsburg City</option>
+                        <option value="840">Winchester City</option>
+                        <option value="195">Wise County</option>
+                        <option value="197">Wythe County</option>
+                        <option value="199">York County</option>
                     </select>
                 </div>
             </fieldset>
@@ -510,14 +512,14 @@
                     </select>
                 </div>
 
-                <div id="phone" class="form-group form-inline">
+                <div id="more_info__telephone" class="form-group form-inline phone">
                     <label for="more_info__telephone" class="control-label optional">Telephone</label>
                     <span class="light">(</span>
-                    <input type="text" name="more_info__telephone1" class="form-control" style="max-width: 4.25em;" minlength="3" maxlength="3" digits />
+                    <input type="text" name="telephone1" class="form-control" style="max-width: 4.25em;" minlength="3" maxlength="3" digits />
                     <span class="light">) &nbsp;</span>
-                    <input type="text" name="more_info__telephone2" class="form-control" style="max-width: 4.25em;" minlength="3" maxlength="3" />
+                    <input type="text" name="telephone2" class="form-control" style="max-width: 4.25em;" minlength="3" maxlength="3" />
                     <span class="light"> - </span>
-                    <input type="text" name="more_info__telephone3" class="form-control" style="max-width: 5em;" minlength="4" maxlength="4" digits />
+                    <input type="text" name="telephone3" class="form-control" style="max-width: 5em;" minlength="4" maxlength="4" digits />
                     <input type="hidden" name="more_info__telephone" value="" />
                 </div>
 
@@ -526,7 +528,7 @@
                     <input name="email" type="email" class="form-control" />
                 </div>
 
-                <div id="fax" class="form-group form-inline">
+                <div id="fax" class="form-group form-inline phone">
                     <label for="fax" class="control-label optional">Fax</label>
                     <span class="light">(</span>
                     <input type="text" name="fax_1" class="form-control" style="max-width: 4.25em;" minlength="3" maxlength="3" digits />
@@ -572,21 +574,21 @@
 
                         <div class="radio">
                             <label>
-                                <input name="delivery__to" type="radio" value="Residence Address" />
+                                <input name="delivery__to" type="radio" value="residence address" />
                                 Residence Address
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input name="delivery__to" type="radio" value="Mailing Address" />
+                                <input name="delivery__to" type="radio" value="mailing address" />
                                 Mailing Address
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
-                                <input name="delivery__to" type="radio" value="Email" />
+                                <input name="delivery__to" type="radio" value="email" />
                                 Email
                             </label>
                         </div>
@@ -606,9 +608,9 @@
                     <input name="delivery__city" type="text" class="form-control" />
                 </div>
 
-                <div id="delivery__country" class="form-group">
-                    <label for="delivery__country" class="control-label state">Country</label>
-                    <select name="delivery__country" class="form-control">
+                <div id="country" class="form-group">
+                    <label for="country" class="control-label state">Country</label>
+                    <select name="country" class="form-control">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -862,8 +864,8 @@
                 </div>
 
                 <div id="delivery__statezip" class="form-group state">
-                    <label for="delivery__state" class="control-label state">State</label>
-                    <select name="delivery__state" class="form-control">
+                    <label for="deliv-state" class="control-label state">State</label>
+                    <select name="deliv-state" class="form-control">
                         <option selected>Choose state</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -930,44 +932,44 @@
             <fieldset id="change">
                 <h3>Change of Name/Address</h3>
 
-                <div id="former_name" class="form-group">
-                    <label for="former_name" class="control-label">Former Full Name</label>
-                    <input name="former_name" type="text" class="form-control" />
+                <div id="change__former_name" class="form-group">
+                    <label for="change__former_name" class="control-label">Former Full Name</label>
+                    <input name="change__former_name" type="text" class="form-control" />
                 </div>
 
-                <div id="former_address" class="form-group">
-                    <label for="former_address" class="control-label">Former Address</label>
-                    <input name="former_address" type="text" class="form-control" />
+                <div id="change__former_address" class="form-group">
+                    <label for="change__former_address" class="control-label">Former Address</label>
+                    <input name="change__former_address" type="text" class="form-control" />
                 </div>
 
-                <div id="moved_date" class="form-group form-inline">
+                <div id="change__date_moved" class="form-group form-inline date">
                     <label class="control-label">Date Moved</label>
 
-                    <select name="moved_month" class="form-control">
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
+                    <select name="month_moved" class="form-control month">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
 
-                    <select name="moved_month" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
+                    <select name="day_moved" class="form-control day">
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
@@ -993,7 +995,7 @@
                     </select>
 
 
-                    <select name="moved_year" class="form-control">
+                    <select name="year_moved" class="form-control year">
                         <option value="2015">2015</option>
                         <option value="2014">2014</option>
                         <option value="2013">2013</option>
@@ -1031,6 +1033,8 @@
                         <option value="1981">1981</option>
                         <option value="1980">1980</option>
                     </select>
+
+                    <input type="hidden" name="change__date_moved" value="" />
                 </div>
             </fieldset>
 
@@ -1039,7 +1043,7 @@
             <fieldset id="assistance">
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input name="assistance" type="checkbox" value="" />
+                        <label><input name="assistance" type="checkbox" value="true" />
                         I will need assistance in completing my ballot due to a disability, blindness, or inability to read or write. If checked, assistance form will be provided with ballot.
                         </label>
                     </div>
@@ -1054,35 +1058,35 @@
 
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" value="" />
+                        <label><input name="assistant__signed" type="checkbox" value="true" />
                         I swear/affirm, under felony penalty for making willfully false material statements, that the information I have provided on this form is true and I have written on the Applicant’s signature line &ldquo;Applicant Unable to Sign.&rdquo;
                         </label>
                     </div>
                 </div>
 ￼               
-                <div id="assistant_name" class="form-group">
+                <div id="assistant__name" class="form-group">
                     <p>Provide Information of Assistant</p>
 
-                    <label for="assistant_name" class="control-label">Full Name</label>
-                    <input name="assistant_name" type="text" class="form-control" />
+                    <label for="assistant__name" class="control-label">Full Name</label>
+                    <input name="assistant__name" type="text" class="form-control" />
                 </div>
 
-                <div id="assistant_address" class="form-group form-inline">
-                    <label for="assistant_address" class="control-label address">Address</label>
-                    <input name="assistant_address" type="text" class="form-control address" />
+                <div id="assistant__street" class="form-group form-inline">
+                    <label for="assistant__street" class="control-label address">Address</label>
+                    <input name="assistant__street" type="text" class="form-control address" />
 
-                    <label for="delivery_apt" class="control-label apt">Apt./Suite</label>
-                    <input name="delivery_apt" type="text" class="form-control apt" />
+                    <label for="assistant__unit" class="control-label apt">Apt./Suite</label>
+                    <input name="assistant__unit" type="text" class="form-control apt" />
                 </div>
 
-                <div id="delivery_city" class="form-group">
-                    <label for="delivery_city" class="control-label city">City</label>
-                    <input name="delivery_city" type="text" class="form-control city" />
+                <div id="assistant__city" class="form-group">
+                    <label for="assistant__city" class="control-label city">City</label>
+                    <input name="assistant__city" type="text" class="form-control city" />
                 </div>
 
-                <div id="delivery_statezip" class="form-group">
-                    <label for="delivery_state" class="control-label state">State</label>
-                    <select name="delivery_state" class="form-control state">
+                <div id="assistant__statezip" class="form-group">
+                    <label for="assistant__state" class="control-label state">State</label>
+                    <select name="assistant__state" class="form-control state">
                         <option>Choose state</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -1137,13 +1141,13 @@
                         <option value="Wyoming">Wyoming</option>
                     </select>
 
-                    <label for="delivery_zip" class="control-label zip">ZIP Code</label>
-                    <input name="delivery_zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
+                    <label for="assistant__zip" class="control-label zip">ZIP Code</label>
+                    <input name="assistant__zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
                 </div>
 
-                <div id="assistant_signature" class="form-group">
-                    <label for="assistant_signature" class="control-label">Signature</label>
-                    <input name="assistant_signature" type="text" class="form-control" />
+                <div id="assistant-sig" class="form-group">
+                    <label for="assistant-sig" class="control-label">Signature</label>
+                    <input name="assistant-sig" type="text" class="form-control" />
                 </div>
             </fieldset>
 
@@ -1154,15 +1158,17 @@
 
                 <div class="form-group">
                     <div class="checkbox">
-                        <label><input name="signature_affirm" type="checkbox" value="" />
+                        <label><input name="signature__signed" type="checkbox" value="true" required />
                         I swear/affirm, under felony penalty for making willfully false material statements, that by pressing the Submit button and submitting this information that (1) the information I have provided on this form is true, (2) I am not requesting a ballot or voting in any other jurisdiction in the U.S., except the jurisdiction to which this application relates, and (3) that I am the person named in this absentee application.
                         </label>
                     </div>
                 </div>
 
-                <div id="assistant_signature" class="form-group">
-                    <label for="assistant_signature" class="control-label">Signature</label>
-                    <input name="assistant_signature" type="text" class="form-control" />
+                <div id="signature" class="form-group">
+                    <label for="signature" class="control-label">Signature</label>
+                    <input name="signature" type="text" class="form-control" />
+
+                    <input type="hidden" name="signature__date" value="" />
                 </div>
 
                 <div style="text-align: center; margin-top: 2em;"><input type="submit" value="Submit Application" class="btn-lg btn-default" /></div>

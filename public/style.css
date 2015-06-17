@@ -8568,7 +8568,7 @@ button.close {
   }
 }
 /* line 87, ../assets/scss/style.scss */
-#phone input, #fax input {
+#more_info__telephone input, #fax input {
   float: none;
   display: inline-block;
 }
@@ -9026,13 +9026,13 @@ input.form-control.zip {
 }
 
 /* line 316, ../assets/scss/style.scss */
-#moved_date .form-control {
+#change__date_moved .form-control {
   width: auto;
   display: inline-block;
   margin-right: 0.5em;
 }
 /* line 320, ../assets/scss/style.scss */
-#moved_date .form-control:last-child {
+#change__date_moved .form-control:last-child {
   margin-right: 0;
 }
 

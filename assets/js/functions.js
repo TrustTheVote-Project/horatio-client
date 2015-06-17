@@ -25,14 +25,21 @@
 	  			// input names follow the format "[fieldset id]_[n]"
 	  			var n = this.name.split('__')[1];
 
-		        if (f[n] !== undefined) {
-		            if (!f[n].push) {
-		                f[n] = [f[n]];
-		            }
-		            f[n].push(this.value || '');
-		        } else {
-		            f[n] = this.value || '';
-		        }
+	  			if (n) { // ignore the field if it doesn't follow the above format
+			        if (f[n] !== undefined) {
+			            if (!f[n].push) {
+			                f[n] = [f[n]];
+			            }
+			            f[n].push(this.value || '');
+			        }
+			        else {
+			        	// make sure booleans aren't expressed as strings
+			            if (this.value == "true")
+			            	f[n] = true;
+			            else
+			            	f[n] = this.value || '';
+			        }
+			    }
 		    });
 
 	  		// add each fieldset object to the meta object
@@ -58,8 +65,24 @@
 			$("input[name='election__locality']").val(val);
 		});
 
+		// generate single date values from multiple selects
+		$(".date").change( function() {
+			var date = $(this).find(".year").val() + "-" +
+						$(this).find(".month").val() + "-" +
+						$(this).find(".day").val();
+			$(this).find("input[type='hidden']").val(date);
+		});
+
+		// generate telephone value from multiple selects
+		$(".phone").change( function() {
+			var date = $(this).find("input:eq(0)").val() + "-" +
+						$(this).find("input:eq(1)").val() + "-" +
+						$(this).find("input:eq(2)").val();
+			$(this).find("input[type='hidden']").val(date);
+		});
+
 		// change state_or_country to state if a state
-		$("select[name='delivery__state']").change( function() {
+		$("select[name='deliv-state']").change( function() {
 			var val = $(this).find("option:selected").val();
 			$("input[name='delivery__state_or_country']").val(val);
 		});
@@ -76,6 +99,10 @@
 				$("#delivery__statezip").show();
 			}
 		});
+
+		// generate signature date
+		var todays_date = new Date();
+		$("input[name='signature__date']").val(todays_date.toISOString());
 
 	    $('form').submit(function() {
 

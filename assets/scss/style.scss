@@ -292,7 +292,7 @@ input.form-control.zip {
     }
 }
 
-#phone, #fax {
+#more_info__telephone, #fax {
     input {
         @extend %form-block;
     }
@@ -311,7 +311,7 @@ input.form-control.zip {
     }
 }
 
-#moved_date {
+#change__date_moved {
 
     .form-control {
         width: auto;
