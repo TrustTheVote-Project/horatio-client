@@ -171,7 +171,7 @@ fieldset {
         @include make-xs-column(3);
     }
 
-    & > input {
+    & > input, & > select {
         @include make-xs-column(9);
     }
 
@@ -198,6 +198,11 @@ label.control-label.apt {
 
 input.form-control.apt {
     @include make-xs-column(2);
+}
+
+select.form-control.state {
+    @include make-xs-column(9);
+    @include make-sm-column(3);
 }
 
 input.form-control.zip {
@@ -281,7 +286,7 @@ input.form-control.zip {
     }
 }
 
-#birth_year {
+#more_info__birth_year {
     select {
         width: auto;
     }
@@ -299,7 +304,7 @@ input.form-control.zip {
     }
 }
 
-#delivery_statezip {
+#delivery__statezip {
     input, select {
         @include make-xs-column(9);
         @include make-sm-column(3);

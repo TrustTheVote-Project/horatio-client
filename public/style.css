@@ -8739,7 +8739,7 @@ fieldset:last-child {
 }
 @media (min-width: 480px) {
   /* line 174, ../assets/scss/style.scss */
-  .form-group > input {
+  .form-group > input, .form-group > select {
     position: relative;
     float: left;
     padding-left: 15px;
@@ -8798,13 +8798,36 @@ fieldset:last-child {
   }
 }
 
-/* line 203, ../assets/scss/style.scss */
+@media (min-width: 480px) {
+  /* line 203, ../assets/scss/style.scss */
+  select.form-control.state {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 75%;
+    min-height: 1px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 203, ../assets/scss/style.scss */
+  select.form-control.state {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 25%;
+  }
+}
+
+/* line 208, ../assets/scss/style.scss */
 input.form-control.zip {
   max-width: 7em;
 }
 
 @media (min-width: 480px) {
-  /* line 209, ../assets/scss/style.scss */
+  /* line 214, ../assets/scss/style.scss */
   #first_middle input {
     position: relative;
     float: left;
@@ -8815,7 +8838,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 209, ../assets/scss/style.scss */
+  /* line 214, ../assets/scss/style.scss */
   #first_middle input {
     position: relative;
     min-height: 1px;
@@ -8827,7 +8850,7 @@ input.form-control.zip {
 }
 
 @media (min-width: 768px) {
-  /* line 216, ../assets/scss/style.scss */
+  /* line 221, ../assets/scss/style.scss */
   #last_ssn input {
     position: relative;
     min-height: 1px;
@@ -8838,7 +8861,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 220, ../assets/scss/style.scss */
+  /* line 225, ../assets/scss/style.scss */
   #last_ssn label[for="name__ssn"] {
     position: relative;
     min-height: 1px;
@@ -8849,7 +8872,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 224, ../assets/scss/style.scss */
+  /* line 229, ../assets/scss/style.scss */
   #last_ssn input[name="name__ssn"] {
     position: relative;
     min-height: 1px;
@@ -8860,13 +8883,13 @@ input.form-control.zip {
   }
 }
 
-/* line 230, ../assets/scss/style.scss */
+/* line 235, ../assets/scss/style.scss */
 .form-inline label {
   display: block;
 }
 
 @media (min-width: 480px) {
-  /* line 238, ../assets/scss/style.scss */
+  /* line 243, ../assets/scss/style.scss */
   #election #election__type {
     position: relative;
     float: left;
@@ -8877,7 +8900,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 238, ../assets/scss/style.scss */
+  /* line 243, ../assets/scss/style.scss */
   #election #election__type {
     position: relative;
     min-height: 1px;
@@ -8888,7 +8911,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 480px) {
-  /* line 243, ../assets/scss/style.scss */
+  /* line 248, ../assets/scss/style.scss */
   #election #election__date {
     position: relative;
     float: left;
@@ -8899,7 +8922,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 243, ../assets/scss/style.scss */
+  /* line 248, ../assets/scss/style.scss */
   #election #election__date {
     position: relative;
     min-height: 1px;
@@ -8910,7 +8933,7 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 247, ../assets/scss/style.scss */
+  /* line 252, ../assets/scss/style.scss */
   #election #election__date label {
     position: relative;
     min-height: 1px;
@@ -8920,22 +8943,22 @@ input.form-control.zip {
     width: 41.66667%;
   }
 }
-/* line 251, ../assets/scss/style.scss */
+/* line 256, ../assets/scss/style.scss */
 #election #election__date .form-control {
   width: auto;
   display: inline-block;
   margin-right: 0.5em;
 }
-/* line 255, ../assets/scss/style.scss */
+/* line 260, ../assets/scss/style.scss */
 #election #election__date .form-control:last-child {
   margin-right: 0;
 }
-/* line 262, ../assets/scss/style.scss */
+/* line 267, ../assets/scss/style.scss */
 #election #election__locality label {
   width: auto;
 }
 @media (min-width: 768px) {
-  /* line 266, ../assets/scss/style.scss */
+  /* line 271, ../assets/scss/style.scss */
   #election #election__locality select {
     position: relative;
     min-height: 1px;
@@ -8947,7 +8970,7 @@ input.form-control.zip {
 }
 
 @media (min-width: 480px) {
-  /* line 275, ../assets/scss/style.scss */
+  /* line 280, ../assets/scss/style.scss */
   #reason .col {
     position: relative;
     float: left;
@@ -8957,18 +8980,18 @@ input.form-control.zip {
     min-height: 1px;
   }
 }
-/* line 279, ../assets/scss/style.scss */
+/* line 284, ../assets/scss/style.scss */
 #reason .radio {
   margin-bottom: 0.5em;
 }
 
-/* line 285, ../assets/scss/style.scss */
-#birth_year select {
+/* line 290, ../assets/scss/style.scss */
+#more_info__birth_year select {
   width: auto;
 }
 
 @media (min-width: 768px) {
-  /* line 297, ../assets/scss/style.scss */
+  /* line 302, ../assets/scss/style.scss */
   #email input {
     position: relative;
     min-height: 1px;
@@ -8980,8 +9003,8 @@ input.form-control.zip {
 }
 
 @media (min-width: 480px) {
-  /* line 303, ../assets/scss/style.scss */
-  #delivery_statezip input, #delivery_statezip select {
+  /* line 308, ../assets/scss/style.scss */
+  #delivery__statezip input, #delivery__statezip select {
     position: relative;
     float: left;
     padding-left: 15px;
@@ -8991,8 +9014,8 @@ input.form-control.zip {
   }
 }
 @media (min-width: 768px) {
-  /* line 303, ../assets/scss/style.scss */
-  #delivery_statezip input, #delivery_statezip select {
+  /* line 308, ../assets/scss/style.scss */
+  #delivery__statezip input, #delivery__statezip select {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -9002,18 +9025,18 @@ input.form-control.zip {
   }
 }
 
-/* line 311, ../assets/scss/style.scss */
+/* line 316, ../assets/scss/style.scss */
 #moved_date .form-control {
   width: auto;
   display: inline-block;
   margin-right: 0.5em;
 }
-/* line 315, ../assets/scss/style.scss */
+/* line 320, ../assets/scss/style.scss */
 #moved_date .form-control:last-child {
   margin-right: 0;
 }
 
-/* line 322, ../assets/scss/style.scss */
+/* line 327, ../assets/scss/style.scss */
 #result {
   margin-top: 2em;
   margin-right: auto;
@@ -9035,7 +9058,7 @@ input.form-control.zip {
   clear: both;
 }
 
-/* line 331, ../assets/scss/style.scss */
+/* line 336, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -9044,12 +9067,12 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 343, ../assets/scss/style.scss */
+  /* line 348, ../assets/scss/style.scss */
   #first_middle input:first-of-type, #last_ssn input:first-of-type {
     margin-bottom: 15px;
   }
 
-  /* line 348, ../assets/scss/style.scss */
+  /* line 353, ../assets/scss/style.scss */
   #election #election__locality input[type="text"] {
     margin: 15px 0 0;
   }
