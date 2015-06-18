@@ -117,13 +117,14 @@
 
 		// change state_or_country to country if a country other than US,
 		// and remove state/zip fields
-		$("select[name='delivery__country']").change( function() {
+		$("select[name='country']").change( function() {
 			var val = $(this).find("option:selected").val();
 			if (val != "United States") {
 				$("input[name='delivery__state_or_country']").val(val);
 				$("#delivery__statezip").hide();
 			}
 			else {
+				$("input[name='delivery__state_or_country']").val($("select[name='deliv-state'] option:selected").val());
 				$("#delivery__statezip").show();
 			}
 		});
