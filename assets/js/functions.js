@@ -40,7 +40,7 @@
 	  			// input names follow the format "[fieldset id]_[n]"
 	  			var n = this.name.split('__')[1];
 
-	  			if (n) { // ignore the field if it doesn't follow the above format
+	  			if (n && this.value !== "") { // ignore the field if it doesn't follow the above format
 			        if (f[n] !== undefined) {
 			            if (!f[n].push) {
 			                f[n] = [f[n]];
@@ -62,15 +62,16 @@
 	            if (!o[fieldset].push) {
 	                o[fieldset] = [o[fieldset]];
 	            }
-	            o[fieldset].push(f || '');
+	            o[fieldset].push(f || '');	
 	        }
+	        else if (size(f) == 0) { // skip the fieldset if it's blank
+	        	return;
+	        }
+	        else if (size(f) == 1 && fieldset == "assistant") { // don't make a new object for assistant field
+	  			o[fieldset] = firstValue(f) || '';
+        	}
 	        else {
-	        	// don't make a new object unless there's > 1 value
-	        	if (size(f) <= 1) {
-		  			o[fieldset] = firstValue(f) || '';
-	        	}
-		  		else
-	            	o[fieldset] = f || '';
+	            o[fieldset] = f || '';
 	        }
 	  	});
 	    
@@ -101,12 +102,23 @@
 			$("input[name='reason__documentation']").val(val);
 		});
 
-		// generate telephone value from multiple selects
+		// generate phone number value from multiple selects
 		$(".phone").change( function() {
 			var date = $(this).find("input:eq(0)").val() + "-" +
 						$(this).find("input:eq(1)").val() + "-" +
 						$(this).find("input:eq(2)").val();
 			$(this).find("input[type='hidden']").val(date);
+		});
+
+		// email/fax field
+		$("input[name='email']").change( function() {
+			var val = $(this).val();
+			$("input[name='more_info__email_fax']").val(val);
+		});
+		$("#fax").change( function() {
+			var val = $(this).find("input[name='fax']").val();
+			if ($("input[name='email']").val() == "") // change "if blank" to "if valid" eventually
+				$("input[name='more_info__email_fax']").val(val);
 		});
 
 		// change state_or_country to state if a state
