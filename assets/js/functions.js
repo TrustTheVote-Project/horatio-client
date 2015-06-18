@@ -94,6 +94,13 @@
 			$(this).find("input[type='hidden']").val(date);
 		});
 
+		// reason documentation field
+		$("input[name='reason__code']").change( function() {
+			// get label text, remove extranneous spaces and new lines
+			var val = $(this).parent("label").text().replace(/([ ][ ]|\n)/g,"");
+			$("input[name='reason__documentation']").val(val);
+		});
+
 		// generate telephone value from multiple selects
 		$(".phone").change( function() {
 			var date = $(this).find("input:eq(0)").val() + "-" +
