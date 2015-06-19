@@ -12,3 +12,9 @@ This is a responsive form that collects the information required to request an a
 * Bower
 * Bootstrap SASS
 * Compass
+
+## Installation
+
+1. Copy onto a web server.
+2. Edit `/assets/js/functions.js` and change `$.post( "http://example.com/submit/"` to replace the URL with the URL for your installation, including the `/submit/` directory.
+3. You are done.
