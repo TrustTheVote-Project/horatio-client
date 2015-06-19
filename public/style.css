@@ -9025,12 +9025,17 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 350, ../assets/scss/style.scss */
+  /* line 349, ../assets/scss/style.scss */
+  h3 {
+    margin-left: -15px;
+  }
+
+  /* line 354, ../assets/scss/style.scss */
   #first_middle input:first-of-type, #last_suffix input:first-of-type {
     margin-bottom: 15px;
   }
 
-  /* line 356, ../assets/scss/style.scss */
+  /* line 360, ../assets/scss/style.scss */
   label.control-label.apt, label.control-label.zip {
     margin-top: 15px;
   }

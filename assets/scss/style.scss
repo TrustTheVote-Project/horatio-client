@@ -345,6 +345,10 @@ footer {
 -------------------------------------------------------------------------------*/
 
 @media screen and (max-width: $screen-sm) {
+
+    h3 {
+        margin-left: -15px;
+    }
     
     #first_middle, #last_suffix {
         input:first-of-type {
