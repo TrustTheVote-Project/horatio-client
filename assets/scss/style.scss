@@ -290,7 +290,7 @@ input.form-control.zip {
     }
 }
 
-#delivery__statezip {
+#address__statezip, #delivery__statezip {
     input, select {
         @include make-xs-column(9);
         @include make-sm-column(3);
@@ -313,14 +313,21 @@ input.form-control.zip {
     display: none;
 
     & > label {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
+        @include clear-grid;
         text-align: left;
+        display: block;
         margin-bottom: $form-group-margin-bottom;
     }
 
     & > input {
-        clear: left;
-        @include make-xs-column(12);
+        @include clear-grid;
+        width: 100%;
+
+        @media screen and (min-width: $screen-xs) {
+            margin-left: 15px;
+            width: calc(100% - 15px);
+        }
     }
 }
 

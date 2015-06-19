@@ -8970,7 +8970,7 @@ input.form-control.zip {
 
 @media (min-width: 480px) {
   /* line 294, ../assets/scss/style.scss */
-  #delivery__statezip input, #delivery__statezip select {
+  #address__statezip input, #address__statezip select, #delivery__statezip input, #delivery__statezip select {
     position: relative;
     float: left;
     padding-left: 15px;
@@ -8981,7 +8981,7 @@ input.form-control.zip {
 }
 @media (min-width: 768px) {
   /* line 294, ../assets/scss/style.scss */
-  #delivery__statezip input, #delivery__statezip select {
+  #address__statezip input, #address__statezip select, #delivery__statezip input, #delivery__statezip select {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -9008,37 +9008,31 @@ input.form-control.zip {
 }
 /* line 315, ../assets/scss/style.scss */
 #reason__documentation > label {
+  position: relative;
+  float: none;
+  width: auto;
+  min-height: none;
   text-align: left;
+  display: block;
   margin-bottom: 15px;
 }
-@media (min-width: 480px) {
-  /* line 315, ../assets/scss/style.scss */
-  #reason__documentation > label {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    min-height: 1px;
-  }
-}
-/* line 321, ../assets/scss/style.scss */
+/* line 323, ../assets/scss/style.scss */
 #reason__documentation > input {
-  clear: left;
+  position: relative;
+  float: none;
+  width: auto;
+  min-height: none;
+  width: 100%;
 }
-@media (min-width: 480px) {
-  /* line 321, ../assets/scss/style.scss */
+@media screen and (min-width: 480px) {
+  /* line 323, ../assets/scss/style.scss */
   #reason__documentation > input {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    min-height: 1px;
+    margin-left: 15px;
+    width: calc(100% - 15px);
   }
 }
 
-/* line 328, ../assets/scss/style.scss */
+/* line 335, ../assets/scss/style.scss */
 #result {
   margin-top: 2em;
   margin-right: auto;
@@ -9060,7 +9054,7 @@ input.form-control.zip {
   clear: both;
 }
 
-/* line 337, ../assets/scss/style.scss */
+/* line 344, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -9069,7 +9063,7 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 349, ../assets/scss/style.scss */
+  /* line 356, ../assets/scss/style.scss */
   #first_middle input:first-of-type, #last_suffix input:first-of-type {
     margin-bottom: 15px;
   }
