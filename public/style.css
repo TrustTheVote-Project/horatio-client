@@ -8762,68 +8762,52 @@ fieldset:last-child {
   margin-bottom: 15px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   /* line 191, ../assets/scss/style.scss */
   input.form-control.address {
     position: relative;
-    float: left;
+    min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    float: left;
     width: 41.66667%;
-    min-height: 1px;
   }
 }
 
-@media (min-width: 480px) {
-  /* line 195, ../assets/scss/style.scss */
-  label.control-label.apt {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 16.66667%;
-    min-height: 1px;
-  }
-}
-
-@media (min-width: 480px) {
-  /* line 199, ../assets/scss/style.scss */
-  input.form-control.apt {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 16.66667%;
-    min-height: 1px;
-  }
-}
-
-@media (min-width: 480px) {
-  /* line 203, ../assets/scss/style.scss */
-  select.form-control.state {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 75%;
-    min-height: 1px;
-  }
-}
 @media (min-width: 768px) {
-  /* line 203, ../assets/scss/style.scss */
+  /* line 195, ../assets/scss/style.scss */
+  label.control-label.apt, input.form-control.apt,
+  label.control-label.zip, input.form-control.zip {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 16.66667%;
+  }
+}
+
+/* line 200, ../assets/scss/style.scss */
+input.form-control.apt, input.form-control.zip {
+  max-width: 10em;
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 200, ../assets/scss/style.scss */
+  input.form-control.apt, input.form-control.zip {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 208, ../assets/scss/style.scss */
   select.form-control.state {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     float: left;
-    width: 25%;
+    width: 41.66667%;
   }
-}
-
-/* line 208, ../assets/scss/style.scss */
-input.form-control.zip {
-  max-width: 7em;
 }
 
 @media (min-width: 480px) {
@@ -8968,45 +8952,22 @@ input.form-control.zip {
   }
 }
 
-@media (min-width: 480px) {
-  /* line 294, ../assets/scss/style.scss */
-  #address__statezip input, #address__statezip select, #delivery__statezip input, #delivery__statezip select {
-    position: relative;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 75%;
-    min-height: 1px;
-  }
-}
-@media (min-width: 768px) {
-  /* line 294, ../assets/scss/style.scss */
-  #address__statezip input, #address__statezip select, #delivery__statezip input, #delivery__statezip select {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-    width: 25%;
-  }
-}
-
-/* line 302, ../assets/scss/style.scss */
+/* line 295, ../assets/scss/style.scss */
 #change__date_moved .form-control {
   width: auto;
   display: inline-block;
   margin-right: 0.5em;
 }
-/* line 306, ../assets/scss/style.scss */
+/* line 299, ../assets/scss/style.scss */
 #change__date_moved .form-control:last-child {
   margin-right: 0;
 }
 
-/* line 312, ../assets/scss/style.scss */
+/* line 305, ../assets/scss/style.scss */
 #reason__documentation {
   display: none;
 }
-/* line 315, ../assets/scss/style.scss */
+/* line 308, ../assets/scss/style.scss */
 #reason__documentation > label {
   position: relative;
   float: none;
@@ -9016,7 +8977,7 @@ input.form-control.zip {
   display: block;
   margin-bottom: 15px;
 }
-/* line 323, ../assets/scss/style.scss */
+/* line 316, ../assets/scss/style.scss */
 #reason__documentation > input {
   position: relative;
   float: none;
@@ -9025,14 +8986,14 @@ input.form-control.zip {
   width: 100%;
 }
 @media screen and (min-width: 480px) {
-  /* line 323, ../assets/scss/style.scss */
+  /* line 316, ../assets/scss/style.scss */
   #reason__documentation > input {
     margin-left: 15px;
     width: calc(100% - 15px);
   }
 }
 
-/* line 335, ../assets/scss/style.scss */
+/* line 328, ../assets/scss/style.scss */
 #result {
   margin-top: 2em;
   margin-right: auto;
@@ -9054,7 +9015,7 @@ input.form-control.zip {
   clear: both;
 }
 
-/* line 344, ../assets/scss/style.scss */
+/* line 337, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -9063,9 +9024,14 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 356, ../assets/scss/style.scss */
+  /* line 349, ../assets/scss/style.scss */
   #first_middle input:first-of-type, #last_suffix input:first-of-type {
     margin-bottom: 15px;
+  }
+
+  /* line 355, ../assets/scss/style.scss */
+  label.control-label.apt, label.control-label.zip {
+    margin-top: 15px;
   }
 }
 /* Print styles

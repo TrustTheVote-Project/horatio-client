@@ -189,24 +189,24 @@ fieldset {
 }
 
 input.form-control.address {
-    @include make-xs-column(5);
+    @include make-sm-column(5);
 }
 
-label.control-label.apt {
-    @include make-xs-column(2);
+label.control-label.apt, input.form-control.apt,
+label.control-label.zip, input.form-control.zip {
+    @include make-sm-column(2);
 }
 
-input.form-control.apt {
-    @include make-xs-column(2);
+input.form-control.apt, input.form-control.zip  {
+    max-width: 10em;
+
+    @media screen and (min-width: $screen-xs) and (max-width: $screen-sm) {
+        margin-top: $form-group-margin-bottom;
+    }
 }
 
 select.form-control.state {
-    @include make-xs-column(9);
-    @include make-sm-column(3);
-}
-
-input.form-control.zip {
-    max-width: 7em;
+    @include make-sm-column(5);
 }
 
 // section 1: name + ssn
@@ -290,13 +290,6 @@ input.form-control.zip {
     }
 }
 
-#address__statezip, #delivery__statezip {
-    input, select {
-        @include make-xs-column(9);
-        @include make-sm-column(3);
-    }
-}
-
 #change__date_moved {
 
     .form-control {
@@ -356,6 +349,11 @@ footer {
         input:first-of-type {
             margin-bottom: $form-group-margin-bottom;
         }
+    }
+
+
+    label.control-label.apt, label.control-label.zip {
+        margin-top: $form-group-margin-bottom;
     }
         
 }
