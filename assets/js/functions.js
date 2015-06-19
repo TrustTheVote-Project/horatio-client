@@ -97,9 +97,58 @@
 
 		// reason documentation field
 		$("input[name='reason__code']").change( function() {
-			// get label text, remove extranneous spaces and new lines
-			var val = $(this).parent("label").text().replace(/([ ][ ]|\n)/g,"");
-			$("input[name='reason__documentation']").val(val);
+
+			var label = "";
+			var doc_field = $("#reason__documentation");
+			doc_field.show();
+
+			switch($(this).val()) {
+				case "1A":
+				case "1B":
+					label = "Please enter the name of your college or university.";
+					break;
+				case "1C":
+				case "6D":
+					label = "Please enter the name of your employer or business.";
+					break;
+				case "1D":
+					label = "Please enter your place of travel (VA county/city or state or country).";
+					break;
+				case "1E":
+					label = "Please enter the name of the employer or business and election day hours of working and commuting (AM to PM).";
+					break;
+				case "2B":
+					label = "Please enter your relationship to the family member.";
+					break;
+				case "3A":
+				case "3B":
+					label = "Please enter the name of your institution.";
+					break;
+				case "5A":
+					label = "Please describe the nature of your obligation.";
+					break;
+				case "6A":
+					label = "Please enter your branch of service.";
+					break;
+				case "6B":
+					label = "Please enter their branch of service.";
+					break;
+				case "6C":
+					label = "Please enter your last date of residency at your Virginia voting residence only if you have given up that address permanently or have no intent to return.";
+					break;
+				case "7A":
+					label = "Please enter your new state of residence and date moved from Virginia. Only eligible if you moved less than 30 days before the presidential election.";
+					break;
+				case "1F":
+				case "2A":
+				case "2C":
+				case "4A":
+				case "8A":
+					doc_field.hide();
+					break;
+			}
+
+			$("label[for='reason__documentation']").text(label);
 		});
 
 		// generate phone number value from multiple selects

@@ -377,10 +377,6 @@
                                 <input name="reason__code" type="radio" value="1F" /> I am a first responder (member of law enforcement, fire fighter, emergency technician, search and rescue)
                             </label>
                         </div>
-                    </div>
-                    
-
-                    <div class="col">
                         <div class="radio">
                             <label>
                                 <input name="reason__code" type="radio" value="2A" /> My disability or illness
@@ -396,6 +392,10 @@
                                 <input name="reason__code" type="radio" value="2C" /> My pregnancy
                             </label>
                         </div>
+                    </div>
+                    
+
+                    <div class="col">
                         <div class="radio">
                             <label>
                                 <input name="reason__code" type="radio" value="3A" /> Confined, awaiting trial
@@ -411,9 +411,47 @@
                                 <input name="reason__code" type="radio" value="4A" /> An electoral board member, registrar, officer of election, or custodian of voting equipment
                             </label>
                         </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="5A" /> I have a religious obligation
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="6A" /> Active Duty Merchant Marine or Armed Forces
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="6B" /> Spouse or dependent living with a member of the Armed Forces or Active Duty Merchant Marine
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="6C" /> Temporarily residing outside of US
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="6D" /> Temporarily residing outside of US for employment or spouse or dependent residing with employee
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="7A" /> Requesting a ballot for presidential and vice-presidential electors only (Ballots for other offices/issues will not be sent)
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="reason__code" type="radio" value="8A" /> Authorized representative of candidate or party serving inside the polling place
+                            </label>
+                        </div>
                     </div>
+                </div>
 
-                    <input type="hidden" name="reason__documentation" value="" />
+                <div id="reason__documentation" class="form-group">
+                    <label for="reason__documentation" class="control-label">Please enter the name of your college or university.</label>
+                    <input name="reason__documentation" type="text" class="form-control" />
                 </div>
             </fieldset>
 
@@ -545,9 +583,10 @@
                     <span class="light"> - </span>
                     <input type="text" name="fax_3" class="form-control" style="max-width: 5em;" minlength="4" maxlength="4" digits />
                     <input type="hidden" name="fax" value="" />
+
+                    <input type="hidden" name="more_info__email_fax" value="" />
                 </div>
 
-                <input type="hidden" name="more_info__email_fax" value="" />
             </fieldset>
 
             
@@ -933,9 +972,10 @@
 
                     <label for="delivery__zip" class="control-label zip">ZIP Code</label>
                     <input name="delivery__zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
+                    
+                    <input type="hidden" name="delivery__state_or_country" value="" />
                 </div>
 
-                <input type="hidden" name="delivery__state_or_country" value="" />
             </fieldset>
 
             
