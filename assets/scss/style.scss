@@ -313,9 +313,10 @@ select.form-control.state {
         margin-bottom: $form-group-margin-bottom;
     }
 
-    & > input {
+    & > textarea {
         @include clear-grid;
         width: 100%;
+        min-height: 4.85em;
 
         @media screen and (min-width: $screen-xs) {
             margin-left: 15px;

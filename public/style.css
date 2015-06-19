@@ -8978,22 +8978,23 @@ input.form-control.apt, input.form-control.zip {
   margin-bottom: 15px;
 }
 /* line 316, ../assets/scss/style.scss */
-#reason__documentation > input {
+#reason__documentation > textarea {
   position: relative;
   float: none;
   width: auto;
   min-height: none;
   width: 100%;
+  min-height: 4.85em;
 }
 @media screen and (min-width: 480px) {
   /* line 316, ../assets/scss/style.scss */
-  #reason__documentation > input {
+  #reason__documentation > textarea {
     margin-left: 15px;
     width: calc(100% - 15px);
   }
 }
 
-/* line 328, ../assets/scss/style.scss */
+/* line 329, ../assets/scss/style.scss */
 #result {
   margin-top: 2em;
   margin-right: auto;
@@ -9015,7 +9016,7 @@ input.form-control.apt, input.form-control.zip {
   clear: both;
 }
 
-/* line 337, ../assets/scss/style.scss */
+/* line 338, ../assets/scss/style.scss */
 footer {
   margin: 2em 0;
   text-align: center;
@@ -9024,12 +9025,12 @@ footer {
 /* Media queries
 -------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  /* line 349, ../assets/scss/style.scss */
+  /* line 350, ../assets/scss/style.scss */
   #first_middle input:first-of-type, #last_suffix input:first-of-type {
     margin-bottom: 15px;
   }
 
-  /* line 355, ../assets/scss/style.scss */
+  /* line 356, ../assets/scss/style.scss */
   label.control-label.apt, label.control-label.zip {
     margin-top: 15px;
   }
