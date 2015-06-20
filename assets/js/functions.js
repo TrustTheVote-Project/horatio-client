@@ -190,9 +190,11 @@
 			}
 		});
 
-		// generate signature date
-		var todays_date = new Date();
-		$("input[name='signature__date']").val(todays_date.toISOString());
+		// generate signature date, which we have to do manually to avoid the inclusion of
+		// microseconds
+		var d = new Date();
+		var formatted_date = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + 'Z';
+		$("input[name='signature__date']").val(formatted_date);
 
 	    $('form').submit(function(e) {
 
