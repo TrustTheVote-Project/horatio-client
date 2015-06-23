@@ -199,11 +199,13 @@
 					// prohibit resubmissions of the form
 					$(this).attr('disabled', 'disabled');
 					$(this).parents('form').submit()
-					$('#result').text('Error: Your absentee ballot application could not be processed.');
+					//$('#result').text('Error: Your absentee ballot application could not be processed.');
+					$('#modal-success').modal('show');
 				})
 				
 				.fail(function() {
-					$('#result').text('Error: Your absentee ballot application could not be processed.');
+					$('#modal-failure').modal('show');
+					//$('#result').text('Error: Your absentee ballot application could not be processed.');
 				});
 
 	        return false;
