@@ -190,7 +190,7 @@
 			}
 		});
 
-		// generate signature date, which we have to do manually to avoid the inclusion of
+		// generate the signature date, which we have to do manually to avoid the inclusion of
 		// microseconds
 		var d = new Date();
 		var formatted_date = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + 'Z';
@@ -198,11 +198,22 @@
 
 	    $('form').submit(function(e) {
 
-	    	// for testing, output the JSON at the bottom of the page
 	    	e.preventDefault();
-	        $('#result').text(JSON.stringify($('form').serializeObject()));
+	    	// for testing, output the JSON at the bottom of the page
+	        //$('#result').text(JSON.stringify($('form').serializeObject()));
 
-	        $.post( "http://jaquith.org/api/submit/", JSON.stringify($('form').serializeObject()) );
+	        $.post( "https://www.democraticabsentee.com/api/submit/", JSON.stringify($('form').serializeObject()) )
+	        	
+	        	.done(function() {
+					// prohibit resubmissions of the form
+					$(this).attr('disabled', 'disabled');
+					$(this).parents('form').submit()
+					$('#result').text('Error: Your absentee ballot application could not be processed.');
+				})
+				
+				.fail(function() {
+					$('#result').text('Error: Your absentee ballot application could not be processed.');
+				});
 
 	        return false;
 	    });
