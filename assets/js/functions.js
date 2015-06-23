@@ -168,7 +168,7 @@
 		});
 
 		// change state_or_country to country if a country other than US,
-		// and remove state/zip fields
+		// and remove state/ZIP fields
 		$("select[name='country']").change( function() {
 			var val = $(this).find("option:selected").val();
 			if (val != "United States") {
@@ -184,7 +184,7 @@
 		// generate the signature date, which we have to do manually to avoid the inclusion of
 		// microseconds
 		var d = new Date();
-		var formatted_date = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() + 'Z';
+		var formatted_date = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + d.getSeconds() + 'Z';
 		$("input[name='signature__date']").val(formatted_date);
 
 	    $('form').submit(function(e) {
