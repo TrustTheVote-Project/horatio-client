@@ -54,12 +54,18 @@
 		<h1>Virginia Absentee Ballot Application</h1>
 	
 	</header>
+
+    <section id="instructions">
+        <p>You can apply to vote absentee as early as one year before the election. Ballots are available 45 days before most elections. The deadline for receipt of your application to vote absentee by mail is 5:00 PM the Tuesday before the election. You can contact the State Board of Elections at <a href="tel:+18005529745">800-552-9745</a> or <a href="mailto:info@sbe.virginia.gov">info@sbe.virginia.gov</a>.</p>
+    </section>
 	
 	<section id="absentee-form" class="form-horizontal">
 		<form>
-
             <!-- Section 1: Name & SSN -->
             <fieldset id="name">
+                
+                <h3>Your Name and SSN</h3>
+                
                 <div id="first_middle" class="form-group">
                     <label for="name__first" class="control-label">First Name</label>
                     <input name="name__first" type="text" class="form-control" required />
@@ -85,7 +91,7 @@
             
             <!-- Section 2: Election -->
             <fieldset id="election">
-
+                <h3>Election</h3>
                 <div class="form-group">
                     <div id="election__type" class="radio-group">
                         <p>I am applying to vote in:</p>
@@ -1002,7 +1008,7 @@
             <!-- Section 7: Change of Name/Address -->
             <fieldset id="change">
                 <h3>Change of Name/Address</h3>
-
+                <p>If changing registration name/address.</p>
                 <div id="change__former_name" class="form-group">
                     <label for="change__former_name" class="control-label">Former Full Name</label>
                     <input name="change__former_name" type="text" class="form-control" />
@@ -1112,6 +1118,7 @@
             
             <!-- Section 8: Assistance to Vote -->
             <fieldset id="assistance">
+                <h3>Assistance To Vote</h3>
                 <div class="form-group">
                     <div class="checkbox">
                         <label><input name="assistance__assistance" type="checkbox" value="true" />
@@ -1125,7 +1132,6 @@
             <!-- Section 9: Assistant's Statement -->
             <fieldset id="assistant">
                 <h3>Assistant’s Statement/Info</h3>
-
 
                 <div class="form-group">
                     <div class="checkbox">
@@ -1244,7 +1250,7 @@
 
     <div id="result"></div>
 	
-	<footer></footer>
+	<footer>Published under the MIT License. Fork the <a href="https://github.com/waldoj/absentee-client/">client</a> or the <a href="https://github.com/waldoj/absentee-server/">server</a> on GitHub.</footer>
 
 </div>
 
