@@ -81,6 +81,10 @@
 	/* trigger when page is ready */
 	$(document).ready(function (){
 
+		// hide our dialog boxes
+		$('#modal-success').modal({ show: false})
+		$('#modal-failure').modal({ show: false})
+
 		// update locality hidden field with locality_gnis select value
 		$("select[name='election__locality_gnis']").change( function() {
 			var val = $(this).find("option:selected").text();
@@ -151,23 +155,10 @@
 			$("label[for='reason__documentation']").text(label);
 		});
 
-		// generate phone number value from multiple selects
-		$(".phone").change( function() {
-			var date = $(this).find("input:eq(0)").val() + "-" +
-						$(this).find("input:eq(1)").val() + "-" +
-						$(this).find("input:eq(2)").val();
-			$(this).find("input[type='hidden']").val(date);
-		});
-
 		// email/fax field
 		$("input[name='email']").change( function() {
 			var val = $(this).val();
 			$("input[name='more_info__email_fax']").val(val);
-		});
-		$("#fax").change( function() {
-			var val = $(this).find("input[name='fax']").val();
-			if ($("input[name='email']").val() == "") // change "if blank" to "if valid" eventually
-				$("input[name='more_info__email_fax']").val(val);
 		});
 
 		// change state_or_country to state if a state
