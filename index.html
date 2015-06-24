@@ -56,9 +56,18 @@
     <section id="instructions">
         <p>You can apply to vote absentee as early as one year before the election. Ballots are available 45 days before most elections. The deadline for receipt of your application to vote absentee by mail is 5:00 PM the Tuesday before the election. You can contact the State Board of Elections at <a href="tel:+18005529745">800-552-9745</a> or <a href="mailto:info@sbe.virginia.gov">info@sbe.virginia.gov</a>.</p>
     </section>
-	
-	<section id="absentee-form" class="form-horizontal">
-		<form>
+
+    <div id="failure-message" role="alert" class="hidden panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">&nbsp;Error</h3>
+        </div>
+        <div class="panel-body">
+            Your application has not been submitted. Please correct the following: {{ERROR}}
+        </div>
+    </div>
+    
+    <section id="absentee-form" class="form-horizontal">
+        <form>
             <!-- Section 1: Name & SSN -->
             <fieldset id="name">
                 
@@ -1186,26 +1195,16 @@
 
                 <div style="text-align: center; margin-top: 2em;"><input type="submit" value="Submit Application" class="btn-lg btn-default" /></div>
             </fieldset>
-		</form>
-	</section>
+        </form>
+    </section>
 
+    <div id="success-message" class="hidden">
+        <div class="jumbotron bg-success">
+            <h1>Application Submitted</h1>
+            <p>Your absentee ballot application has been emailed to the {{REGISTRAR_LOCALITY}} registrar, at {{REGISTRAR_EMAIL}}. No further action is required on your part.</p>
 
-    <div id="result"></div>
-
-    <div class="modal fade modal-success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <h4>Absentee Ballot Application Submitted</h4>
-                <p>Your absentee ballot application has been submitted to your local registrar.</p>
-            </div>
-    </div>
-
-    <div class="modal fade modal-failure" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <h4>Error: Application Not Submitted</h4>
-                <p>There was an error preventing your ballot from being submitted.</p>
-            </div>
+             <p><a class="btn btn-primary btn-lg" href="{{PDF_URL}}" role="button">Download PDF</a></p>
+        </div>
     </div>
     
     <footer>Published under the MIT License. Fork the <a href="https://github.com/waldoj/absentee-client/">client</a> or the <a href="https://github.com/waldoj/absentee-server/">server</a> on GitHub.</footer>

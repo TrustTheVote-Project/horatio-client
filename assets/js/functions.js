@@ -182,22 +182,52 @@
 	    $('form').submit(function(e) {
 
 	    	e.preventDefault();
-	    	// for testing, output the JSON at the bottom of the page
-	        //$('#result').text(JSON.stringify($('form').serializeObject()));
 
-	        $.post( "https://www.democraticabsentee.com/api/submit/", JSON.stringify($('form').serializeObject()) )
+	        $.post(
+	        	"https://www.democraticabsentee.com/api/submit/",
+	        	JSON.stringify($('form').serializeObject())
+	        )
 	        	
-	        	.done(function() {
+	        	// on success, display an acknowledgement
+	        	.done(function(json, textStatus, ErrorThrown) {
+
 					// prohibit resubmissions of the form
 					$(this).attr('disabled', 'disabled');
 					$(this).parents('form').submit()
-					//$('#result').text('Error: Your absentee ballot application could not be processed.');
-					$('#modal-success').modal('show');
+					
+					// assemble the text of the acknowledgement screen
+					var response = jQuery.parseJSON(json);
+					var pdf_url = response.pdf_url;
+					var registrar_locality = response.registrar.locality;
+					var registrar_email = response.registrar.email;
+					var successText = $("#success-message").html();
+					successText = successText.replace("{{PDF_URL}}", pdf_url);
+					successText = successText.replace("{{REGISTRAR_LOCALITY}}", registrar_locality);
+					successText = successText.replace("{{REGISTRAR_EMAIL}}", registrar_email);
+					$("#success-message").html(successText);
+
+					// replace the body content with the success message
+					$('section').replaceWith($("div#success-message").html());
+
 				})
 				
-				.fail(function() {
-					$('#modal-failure').modal('show');
-					//$('#result').text('Error: Your absentee ballot application could not be processed.');
+				// on failure, display a list of errors
+				.fail(function(json, textStatus, ErrorThrown) {
+
+					var response = jQuery.parseJSON(json.responseText);
+					var errorList = '<ul>';
+					var errors = response.errors;
+					$.each(errors, function(type, details) {
+						errorList = errorList + '<li><strong>' + type + ':</strong> ' + details + '</li>';
+					});
+					errorList = errorList + '</ul>';
+
+					var errorText = $("#failure-message").html();
+					errorText = errorText.replace("{{ERROR}}", errorList);
+					$("#failure-message").html(errorText);
+					$( 'div#failure-message').toggleClass('hidden');
+					$('html,body').animate({scrollTop: $("#failure-message").offset().top},'slow');
+
 				});
 
 	        return false;
