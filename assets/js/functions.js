@@ -184,8 +184,8 @@
 		// generate the signature date, which we have to do manually to avoid the inclusion of
 		// microseconds
 		var d = new Date();
-		var formatted_date = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + d.getSeconds() + 'Z';
-		$("input[name='signature__date']").val(formatted_date);
+		var formattedDate = d.getFullYear() + '-' + ('0' + d.getMonth()).slice(-2) + '-' + ('0' + d.getDate()).slice(-2) + 'T' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + ('0' + d.getSeconds()).slice(-2) + 'Z';
+		$("input[name='signature__date']").val(formattedDate);
 
 	    $('form').submit(function(e) {
 
