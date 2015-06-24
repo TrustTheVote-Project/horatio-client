@@ -91,14 +91,6 @@
 			$("input[name='election__locality']").val(val);
 		});
 
-		// generate single date values from multiple selects
-		$(".date").change( function() {
-			var date = $(this).find(".year").val() + "-" +
-						$(this).find(".month").val() + "-" +
-						$(this).find(".day").val();
-			$(this).find("input[type='hidden']").val(date);
-		});
-
 		// reason documentation field
 		$("input[name='reason__code']").change( function() {
 
