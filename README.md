@@ -1,4 +1,4 @@
-# Absentee Ballot Client
+# Horatio: Absentee Ballot Client
 
 
 A client for an absentee ballot request form, with [a corresponding server](https://github.com/waldoj/absentee-server/).
