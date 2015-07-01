@@ -146,6 +146,28 @@
 
 			$("label[for='reason__documentation']").text(label);
 		});
+		
+		// Only display the delivery-to address fields if it's necessary
+		$("#delivery_address").hide();
+		$("input[name='delivery__to']").change( function() {
+			if ($(this).val() == 'mailing address') {
+				$("#delivery_address").show();
+			}
+			else {
+				$("#delivery_address").hide();
+			}
+		});
+
+		// Only display the assistant-info section if it's necessary
+		$("#assistant").hide();
+		$("input[name='assistance__assistance']").change( function() {
+			if (this.checked) {
+				$("#assistant").show();
+			}
+			else {
+				$("#assistant").hide();
+			}
+		});
 
 		// change state_or_country to state if a state
 		$("select[name='deliv-state']").change( function() {
