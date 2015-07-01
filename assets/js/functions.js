@@ -147,12 +147,6 @@
 			$("label[for='reason__documentation']").text(label);
 		});
 
-		// email/fax field
-		$("input[name='email']").change( function() {
-			var val = $(this).val();
-			$("input[name='more_info__email_fax']").val(val);
-		});
-
 		// change state_or_country to state if a state
 		$("select[name='deliv-state']").change( function() {
 			var val = $(this).find("option:selected").val();
