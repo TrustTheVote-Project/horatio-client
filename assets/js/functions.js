@@ -145,6 +145,7 @@
 			}
 
 			$("label[for='reason__documentation']").text(label);
+			$("#reason__documentation_field").prop('required',true);
 		});
 		
 		// Only display the delivery-to address fields if it's necessary
