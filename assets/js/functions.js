@@ -140,12 +140,15 @@
 				case "2C":
 				case "4A":
 				case "8A":
+					$("#reason__documentation_field").prop('required', false);
 					doc_field.hide();
 					break;
 			}
 
-			$("label[for='reason__documentation']").text(label);
-			$("#reason__documentation_field").prop('required',true);
+			if (label != '') {
+				$("label[for='reason__documentation_field']").text(label);
+				$("#reason__documentation_field").prop('required', true);
+			}
 		});
 		
 		// Only display the delivery-to address fields if it's necessary
