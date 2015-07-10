@@ -159,6 +159,15 @@
 			}
 			else {
 				$("#delivery_address").hide();
+
+				// Require an email address, if that's the selected delivery method
+				if ($(this).val() == 'email') {
+					$("#more_info__email_fax").prop('required', true);
+				}
+				else {
+					$("#more_info__email_fax").prop('required', false);
+				}
+
 			}
 		});
 
