@@ -91,7 +91,7 @@
 
                 <div id="name__ssn" class="form-group">
                     <label for="name__ssn_field" class="control-label">Social Security&nbsp;# (last&nbsp;4)</label>
-                    <input name="name__ssn" id="name__ssn_field" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" required digits />
+                    <input name="name__ssn" id="name__ssn_field" type="text" class="form-control" style="max-width: 9em;" minlength="4" maxlength="4" pattern="^([0-9]{4})$" required digits />
                 </div>
             </fieldset>
 
@@ -496,7 +496,7 @@
 
                 <div id="more_info__telephone" class="form-group form-inline phone">
                     <label for="more_info__telephone_field" class="control-label optional">Telephone</label>
-                    <input type="tel" name="more_info__telephone" id="more_info__telephone_field" class="form-control" minlength="10" maxlength="14" />
+                    <input type="tel" name="more_info__telephone" id="more_info__telephone_field" class="form-control" minlength="10" maxlength="14" pattern="^(.{10,14})$"  />
                 </div>
 
                 <div id="email" class="form-group">
@@ -594,7 +594,7 @@
                     </select>
 
                     <label for="address__zip" class="control-label zip">ZIP Code</label>
-                    <input name="address__zip" id="address__zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
+                    <input name="address__zip" id="address__zip" type="text" class="form-control zip" minlength="5" maxlength="5" pattern="^(\d{5})$" digits />
                 </div>
             </fieldset>
 
@@ -965,7 +965,7 @@
                         </select>
 
                         <label for="delivery__zip" class="control-label zip">ZIP Code</label>
-                        <input name="delivery__zip" id="delivery__zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
+                        <input name="delivery__zip" id="delivery__zip" type="text" class="form-control zip" minlength="5" maxlength="5" pattern="^(\d{5})$" digits />
                         
                         <input type="hidden" name="delivery__state_or_country" value="" />
                     </div>
@@ -1105,7 +1105,7 @@
                     </select>
 
                     <label for="assistant__zip" class="control-label zip">ZIP Code</label>
-                    <input name="assistant__zip" id="assistant__zip" type="text" class="form-control zip" minlength="5" maxlength="5" digits />
+                    <input name="assistant__zip" id="assistant__zip" type="text" class="form-control zip" minlength="5" maxlength="5" pattern="^(\d{5})$" digits />
                 </div>
 
                 <div id="assistant-sig" class="form-group">
