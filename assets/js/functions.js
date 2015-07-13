@@ -120,9 +120,6 @@
 				case "3B":
 					label = "Please enter the name of your institution.";
 					break;
-				case "5A":
-					label = "Please describe the nature of your obligation.";
-					break;
 				case "6A":
 					label = "Please enter your branch of service.";
 					break;
@@ -139,6 +136,7 @@
 				case "2A":
 				case "2C":
 				case "4A":
+				case "5A":
 				case "8A":
 					$("#reason__documentation_field").prop('required', false);
 					doc_field.hide();
