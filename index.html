@@ -1029,15 +1029,15 @@
 
                 <div class="form-group">
 
-                    <label for="signature-name" class="control-label">Your Name (In Lieu of Signature)</label>
-                    <input name="signature-name" id="signature-name" type="text" class="form-control" minlength="3" required />
-
                     <div class="checkbox">
-                        <label><input name="signature__signed" type="checkbox" value="true" required />
+                        <label><input name="checkbox" type="checkbox" value="true" required />
                         I swear/affirm, under felony penalty for making willfully false material statements, that by pressing the Submit button and submitting this information that (1) the information I have provided on this form is true, (2) I am not requesting a ballot or voting in any other jurisdiction in the U.S., except the jurisdiction to which this application relates, and (3) that I am the person named in this absentee application.
                         </label>
                         <input type="hidden" name="signature__date" value="" />
                     </div>
+
+                    <label for="signature-signed" class="control-label">Your Name (In Lieu of Signature)</label>
+                    <input name="signature__signed" id="signature-signed" type="text" class="form-control" minlength="3" required />
 
                 </div>
 
