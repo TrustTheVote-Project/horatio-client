@@ -180,6 +180,16 @@
 			}
 		});
 
+		// 
+		$("input[name='assistant__signed']").change( function() {
+			if (this.checked) {
+				$("input[name='signature__signed']").val('Applicant Unable to Sign');
+			}
+			else {
+				$("input[name='signature__signed']").val('');
+			}
+		});
+
 		// change state_or_country to state if a state
 		$("select[name='deliv-state']").change( function() {
 			var val = $(this).find("option:selected").val();
