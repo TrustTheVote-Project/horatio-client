@@ -85,13 +85,16 @@
 		$('#modal-success').modal({ show: false})
 		$('#modal-failure').modal({ show: false})
 
+		// hide the email ballot delivery option by default
+		$("#delivery_email").hide();
+
 		// update locality hidden field with locality_gnis select value
 		$("select[name='election__locality_gnis']").change( function() {
 			var val = $(this).find("option:selected").text();
 			$("input[name='election__locality']").val(val);
 		});
 
-		// reason documentation field
+		// require a reasonable explanation and permit email ballot delivery for some reasons
 		$("input[name='reason__code']").change( function() {
 
 			var label = "";
@@ -106,6 +109,7 @@
 				case "1C":
 				case "6D":
 					label = "Please enter the name of your employer or business.";
+					$("#delivery_email").show();
 					break;
 				case "1D":
 					label = "Please enter your place of travel (VA county/city or state or country).";
@@ -122,12 +126,15 @@
 					break;
 				case "6A":
 					label = "Please enter your branch of service.";
+					$("#delivery_email").show();
 					break;
 				case "6B":
 					label = "Please enter their branch of service.";
+					$("#delivery_email").show();
 					break;
 				case "6C":
 					label = "Please enter your last date of residency at your Virginia voting residence only if you have given up that address permanently or have no intent to return.";
+					$("#delivery_email").show();
 					break;
 				case "7A":
 					label = "Please enter your new state of residence and date moved from Virginia. Only eligible if you moved less than 30 days before the presidential election.";
@@ -180,7 +187,7 @@
 			}
 		});
 
-		// 
+		// If an assistant has signed the form, note that in the applicant signature field.
 		$("input[name='assistant__signed']").change( function() {
 			if (this.checked) {
 				$("input[name='signature__signed']").val('Applicant Unable to Sign');
