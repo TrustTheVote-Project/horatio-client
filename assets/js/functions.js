@@ -107,8 +107,10 @@
 					label = "Please enter the name of your college or university.";
 					break;
 				case "1C":
+					label = "Please enter the name of your employer or business";
+					break;
 				case "6D":
-					label = "Please enter the name of your employer or business.";
+					label = "Please enter the name of your business or employer.";
 					$("#delivery_email").show();
 					break;
 				case "1D":
