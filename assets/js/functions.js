@@ -229,6 +229,9 @@
 
 	    	e.preventDefault();
 
+	    	// disable the submit button to prevent repeat submissions
+	    	$('input:submit').attr('disabled', true);
+
 	        $.post(
 	        	"https://www.democraticabsentee.com/api/submit/",
 	        	JSON.stringify($('form').serializeObject())
@@ -239,7 +242,7 @@
 
 					// prohibit resubmissions of the form
 					$(this).attr('disabled', 'disabled');
-					$(this).parents('form').submit()
+					$(this).parents('form').submit();
 					
 					// assemble the text of the acknowledgement screen
 					var response = jQuery.parseJSON(json);
@@ -259,6 +262,9 @@
 				
 				// on failure, display a list of errors
 				.fail(function(json, textStatus, ErrorThrown) {
+
+	    			// reenable the submit button
+	    			$('input:submit').attr('disabled', false);
 
 					var response = jQuery.parseJSON(json.responseText);
 					var errorList = '<ul>';
